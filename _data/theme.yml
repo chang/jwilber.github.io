@@ -5,22 +5,22 @@ highlight_color: '#3498db'
 
 # Profile links on the left sidebar, leave blank to ignore
 social:
-  github: swanson
+  github: jwilber
   #bitbucket: philipj
-  hacker_news: swanson
+  #hacker_news: swanson
   #stackexchange: 348619
   #stackoverflow: 348619
-  twitter: _swanson
+  twitter: jdwlbr
   #facebook: zuck
   #tumblr: animalygifs
-  #linkedin: philipjagielski
+  linkedin: jared-wilber
   #gplus: 110552447039675960964
   #gravatar: 86e6ff8f75f9daef42d53b7f8002fd95
   #flickr: johndoe
 
-# "Hi, I'm _______"
-name: Matt Swanson
-email: test@example.com
+# "Hi, I'm _____"
+name: Jared Wilber
+email: jdwlbr@gmail.com
 tagline: "weak opinions, strongly held"
 
 # Google Analytics key, leave blank to ignore
