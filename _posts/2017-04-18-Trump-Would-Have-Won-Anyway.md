@@ -22,10 +22,17 @@ Add: Each state gets a minimum of three electoral votes, regardless of populatio
 
 To investigate any bias inheret in the electoral college, we'll randomize state creation in the United States of America. In this way we can simulate multiple electoral outcomes using the same data, and gain a more accurate idea of the role the elctoral college plays in our elections. 
 
-![alt-text-1](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates2.gif?raw=true "title-1") ![alt-text-2](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstateswins2.gif?raw=true	 "title-2")
+![Random State Constructions](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates2.gif?raw=true "title-1") ![Random States Color-coded by Victory](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstateswins2.gif?raw=true	 "title-2")
+
+We can see multiple examples of state outcomes changing due to the counties they encompass. Other expected patterns emerge as well. For example:
+The '[INSERT COASTAL ELITE LINE]' is clear, here, as the coasts mostly remain blue. The infamous sea of red in the flyover states also remains pretty consistent, though we can see multiple examples of states changing color due to party loyalty.
 
 
-[INSERT GIF of SHUFFLED PLOTs] side by side with voter outcome
+
+We can visualize the states 
+
+
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_by_state.gif?raw=true "title-1")
 
 Using the same data, our randomization scheme has yielded vastly different voting outcomes:
 
