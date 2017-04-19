@@ -1,30 +1,27 @@
 ---
 layout: post
-title:  "The Electoral College Didn't Affect The"
+title:  "The Electoral College Didn't Affect The 2016 Election"
 date:   2015-01-17
 theme: cosmo
 ---
 
 # Trump Would Have Won Anyway
 
-## An Investigation Into How The Electoral College Affected the 2016 Outcome
 
 
-The USA prides itself on being a symbol of democracy, but in light of recent elections, it's electoral process,the [electoral college](), has found itself in a position of criticism. People claim that it gives a voice to states that otherwise would go ignored, while some claim it's unfair for giving Joe Smith's vote in Montana more weight than Chad Yee's in California. Others claim it's arbitrary - after all, [reforming just two state borders and shifting only four counties]() would have resulted in a Hillary Clinton victory. This post investigates the elctoral college. Specifically, it aims to answer the following question: 
-
- 	* Does the electoral college favor one party over another, and if so, did this bias affect the election outcome?*
+The USA prides itself on being a symbol of democracy, but in light of recent elections, it's electoral process,the [electoral college](), has found itself in a position of criticism. People claim that it gives a voice to states that otherwise would go ignored, while some claim it's unfair for giving Joe Smith's vote in Montana more weight than Chad Yee's in California. Others claim it's arbitrary - after all, [reforming just two state borders and shifting only four counties]() would have resulted in a Hillary Clinton victory. This post investigates the elctoral college. Specifically, it aims to answer the following question: * Does the electoral college favor one party over another, and if so, did this bias affect the election outcome?*
 
 
-Add: Each state gets a minimum of three electoral votes, regardless of population, which gives low-population states a disproportionate number of electors per capita.[119] For example, an electoral vote represents nearly four times as many people in California as in Wyoming
+Add: Each state gets a minimum of three electoral votes, regardless of population, which gives low-population states a disproportionate number of electors __per__ capita.[119] For example, an electoral vote represents nearly four times as many people in California as in **Wyoming**
 
+***
 
 
 
 To investigate any bias inheret in the electoral college, we'll randomize state creation in the United States of America. In this way we can simulate multiple electoral outcomes using the same data, and gain a more accurate idea of the role the elctoral college plays in our elections. 
 
-To investigate any bias inheret in the electoral college, we'll randomize state creation in the United States of America.
-Party loyalty is drawn from a myriad of sources, such as life experiences, work, etc. State geography, on the other hand, is somewhat arbitrary - a factor of leftover conquest and expansion. Joe Smith's vote will be the same regardless of whether or not the state boundary surrounding him belongs to Nevada or California (though its contribution may not). 
-In this way we can simulate multiple electoral outcomes using the same data, and gain a more accurate idea of the role the elctoral college plays in our elections. Below is one such randomization:
+![alt-text-1](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates.gif?raw=true "title-1" height="100" width="100") ![alt-text-2](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates_win.gif?raw=true	 "title-2" height="100" width="100")
+
 
 [INSERT GIF of SHUFFLED PLOTs] side by side with voter outcome
 
@@ -55,7 +52,7 @@ They also consistently win states.
 
 In fact, as a state's population grows, so too does its propensity to end up Republican:
 
-![alt-text-1](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates.gif?raw=true "title-1" height="400" width="300") ![alt-text-2](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates_win.gif?raw=true	 "title-2" height="400" width="300")
+
 
 
 
