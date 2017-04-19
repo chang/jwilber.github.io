@@ -9,10 +9,12 @@ theme: cosmo
 
 
 
-The USA prides itself on being a symbol of democracy, but in light of recent elections, it's electoral process,the [electoral college](), has found itself in a position of criticism. People claim that it gives a voice to states that otherwise would go ignored, while some claim it's unfair for giving Joe Smith's vote in Montana more weight than Chad Yee's in California. Others claim it's arbitrary - after all, [reforming just two state borders and shifting only four counties]() would have resulted in a Hillary Clinton victory. This post investigates the elctoral college. Specifically, it aims to answer the following question: * Does the electoral college favor one party over another, and if so, did this bias affect the election outcome?*
+The USA prides itself on being a symbol of democracy, but in light of recent elections, it's electoral process,the [electoral college](), has found itself in a position of criticism. People claim that it gives a voice to states that otherwise would go ignored, while some claim it's unfair for giving Joe Smith's vote in Montana more weight than Chad Yee's in California. Others claim it's arbitrary - after all, [reforming just two state borders and shifting only four counties]() would have resulted in a Hillary Clinton victory. This post investigates the elctoral college. Specifically, it aims to answer the following question: 
+
+	***Does the electoral college favor one party over another, and if so, did this bias affect the election outcome?***
 
 
-Add: Each state gets a minimum of three electoral votes, regardless of population, which gives low-population states a disproportionate number of electors __per__ capita.[119] For example, an electoral vote represents nearly four times as many people in California as in **Wyoming**
+Add: Each state gets a minimum of three electoral votes, regardless of population, which gives low-population states a disproportionate number of electors __per__ capita.[119] For example, an electoral vote represents nearly four times as many people in California as in Wyoming
 
 ***
 
