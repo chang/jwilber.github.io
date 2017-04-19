@@ -9,46 +9,49 @@ theme: cosmo
 
 
 
-The USA prides itself on being a symbol of democracy, but in light of recent elections, it's electoral process,the [electoral college](), has found itself in a position of criticism. People claim that it gives a voice to states that otherwise would go ignored, while some claim it's unfair for giving Joe Smith's vote in Montana more weight than Chad Yee's in California. Others claim it's arbitrary - after all, [reforming just two state borders and shifting only four counties]() would have resulted in a Hillary Clinton victory. This post investigates the elctoral college. Specifically, it aims to answer the following question: 
+The USA prides itself on being a symbol of democracy, but in light of recent elections, it's electoral process,the [electoral college](), has found itself in a position of criticism. On the one hand, some people claim that it's necessary and gives a voice to states that otherwise would go ignored, while some claim that it's unfair for giving a disproportionate amount of votes to low-population states. Others claim it's arbitrary - after all, [reforming just two state borders and shifting only four counties]() would have resulted in a Hillary Clinton victory. This post investigates the elctoral college. Specifically, it aims to answer the following question: 
 
-	***Does the electoral college favor one party over another, and if so, did this bias affect the election outcome?***
-
-
-Add: Each state gets a minimum of three electoral votes, regardless of population, which gives low-population states a disproportionate number of electors __per__ capita.[119] For example, an electoral vote represents nearly four times as many people in California as in Wyoming
-
-***
+***Does the electoral college favor one party over another, and if so, did this bias affect the election outcome?***
 
 
 
-To investigate any bias inheret in the electoral college, we'll randomize state creation in the United States of America. In this way we can simulate multiple electoral outcomes using the same data, and gain a more accurate idea of the role the elctoral college plays in our elections. 
+To investigate any bias inheret in the electoral college, we'll randomize state creation in the United States of America. 
 
-![Random State Constructions](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates2.gif?raw=true "title-1") ![Random States Color-coded by Victory](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstateswins2.gif?raw=true	 "title-2")
+![Random State Constructions](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates2.gif?raw=true "title-1")
 
-We can see multiple examples of state outcomes changing due to the counties they encompass. Other expected patterns emerge as well. For example:
-The '[INSERT COASTAL ELITE LINE]' is clear, here, as the coasts mostly remain blue. The infamous sea of red in the flyover states also remains pretty consistent, though we can see multiple examples of states changing color due to party loyalty.
+In this way we can simulate multiple electoral outcomes using the same data, and gain a more accurate idea of the role the elctoral college plays in our elections.
+
+ ![Random States Color-coded by Victory](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstateswins2.gif?raw=true	 "title-2")
+
+We can see multiple examples of state outcomes changing due to the counties they encompass. For example, when we view the vote distribution per state, we can see quite a lot of differences:
 
 
-
-We can visualize the states 
-
+Examples abound of state-level election outcome changing as a function of a state's county composition. For example, we can see that the so-called Democratic '*Costal Elite Party*' stereotype usually holds true - states touching the West Coast overwhelmingly turn blue. However, look at Nevada in the above sample of simulations; as state size ventures too far inward, the vast number of Republican counties overtakes the Democrat majority, and the state ends up voting Red. 
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_per_state2.gif?raw=true "title-1")
 
-Using the same data, our randomization scheme has yielded vastly different voting outcomes:
 
-[VOTE BY STATE PLOT]
-
-As you can see, the outcome changes quite often for some states.
+ When looking at eah states vote count per party, we see a lot of variance. Regardless of the implications this variance has on the arbitrariness of state boundaries, what's interesting is that the same geographic trends seem to emerge: The Democrats (the so-called:) hold the coast, while the Republicans (the so-called:) hold the central sea-of-red.
 
 
-Analysis: Cite specific state difference (CA NY) Analyze plots. Why Cali changes in size
+### The Electoral College
 
-<!-- This process can be repeated over and over again, generating new states, vote outcomes, and election winners on each iteration:
+Under the current scheme, each state is assigned a minimum of 3 electoral votes, leaving 385 remaining votes to be assigned based on state population.
 
-[INSERT 2x2]
+This process of pre-apportioning votes is often criticised for giving low-population states a disproportionate number of electors per capita (e.g., an electoral vote represents nearly four times as many people in California as in Wyoming). However, concensus on the bias inherent in the electoral college is still a topic of much dispute.
 
-Simulating this process over and over will reveal interesting trends in our data. It will DISCUSS REASON TO SIMULATE
- -->
+Recall, the electoral vote distribution for the 2016 election was as follows:
+
+| Party      | # Electoral Votes |
+|------------|-------------------|
+| Democrat   | 232               |
+| Republican | 306               |
+
+Using the above randomization scheme, we can produce multiple election outcomes and view the distribution of obtained electoral votes per party. In this way, we can get better visualize the distribution of possible election outcomes, as well as measure the likelihood of obtaining the results we did.
+
+
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true "title-1")
+
 
 This simulation also reveals enlightening information about the electoral college. Let's view the distribution of electoral votes per party across all 1,000 such simulations, using our current system of the electoral college:
 
