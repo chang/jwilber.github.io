@@ -32,7 +32,7 @@ The '[INSERT COASTAL ELITE LINE]' is clear, here, as the coasts mostly remain bl
 We can visualize the states 
 
 
-![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_by_state.gif?raw=true "title-1")
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_per_state2.gif?raw=true "title-1")
 
 Using the same data, our randomization scheme has yielded vastly different voting outcomes:
 
