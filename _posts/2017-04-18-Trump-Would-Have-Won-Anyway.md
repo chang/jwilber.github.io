@@ -1,3 +1,10 @@
+---
+layout: post
+title:  "The Electoral College Didn't Affect The Election"
+date:   2015-01-17
+theme: cosmo
+---
+
 # Trump Would Have Won Anyway
 
 ## An Investigation Into How The Electoral College Affected the 2016 Outcome
@@ -48,7 +55,7 @@ They also consistently win states.
 
 In fact, as a state's population grows, so too does its propensity to end up Republican:
 
-![alt-text-1](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates.gif?raw=true "title-1") ![alt-text-2](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates_win.gif?raw=true "title-2")
+![alt-text-1](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates.gif?raw=true "title-1") ![alt-text-2](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates_win.gif?raw=true	 "title-2")
 
 
 
