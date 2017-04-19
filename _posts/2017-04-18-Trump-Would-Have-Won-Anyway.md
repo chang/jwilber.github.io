@@ -55,7 +55,7 @@ They also consistently win states.
 
 In fact, as a state's population grows, so too does its propensity to end up Republican:
 
-![alt-text-1](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates.gif?raw=true "title-1") ![alt-text-2](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates_win.gif?raw=true	 "title-2")
+![alt-text-1](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates.gif?raw=true height="400" width="300") ![alt-text-2](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates_win.gif?raw=true	 height="400" width="300")
 
 
 
