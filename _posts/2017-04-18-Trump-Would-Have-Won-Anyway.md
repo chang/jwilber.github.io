@@ -81,7 +81,7 @@ In this case, Repbulicans *are* accrueing more electoral votes than Democrats. W
 
 All of this, of course, culminates into more election victories for Republicans:
 
-![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec1.png?raw=true "title-1")
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec1.png?raw=true height='400' width='400')
 
 So clearly Republicans attain much more victories than do Democrats, despite the Democrats having a majority total vote amount. Is this result because the electoral college in its current form is biased towards Republicans? Or would the outcome be the same regardless of pre-apportionment?
 
@@ -89,8 +89,7 @@ So clearly Republicans attain much more victories than do Democrats, despite the
 
 ### Investigating Bias in the Electoral College
 
-
-
+To investigate, we can repeat the same analyses as above, but for different levels of pre-apportioned votes. In particular, we'll examine what happens as we distribute 3, 2, 1, and 0 pre-apportioned votes.
 
 
 
