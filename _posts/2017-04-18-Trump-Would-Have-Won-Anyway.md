@@ -74,14 +74,14 @@ While it's true that Democratic counties tend to have much higher populations, t
 
  This difference in state victories isn't necessarily important. In America's winner-take-all election process, what really matters is the number of electoral votes each state brings.
 
-![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true "title-1")
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true width='100' height='100')
 
 
 In this case, Repbulicans *are* accrueing more electoral votes than Democrats. What's more, they're doing so more often.
 
 All of this, of course, culminates into more election victories for Republicans:
 
-![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec1.png?raw=true height='400' width='400')
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec1.png?raw=true height='300' width='300')
 
 So clearly Republicans attain much more victories than do Democrats, despite the Democrats having a majority total vote amount. Is this result because the electoral college in its current form is biased towards Republicans? Or would the outcome be the same regardless of pre-apportionment?
 
