@@ -74,7 +74,7 @@ While it's true that Democratic counties tend to have much higher populations, t
 
  This difference in state victories isn't necessarily important. In America's winner-take-all election process, what really matters is the number of electoral votes each state brings.
 
-![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true width='100' height='100')
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true width='100' height='100	')
 
 
 In this case, Repbulicans *are* accrueing more electoral votes than Democrats. What's more, they're doing so more often.
@@ -86,6 +86,7 @@ All of this, of course, culminates into more election victories for Republicans:
 So clearly Republicans attain much more victories than do Democrats, despite the Democrats having a majority total vote amount. Is this result because the electoral college in its current form is biased towards Republicans? Or would the outcome be the same regardless of pre-apportionment?
 
 
+***
 
 ### Investigating Bias in the Electoral College
 
@@ -96,25 +97,43 @@ To investigate, we can repeat the same analyses as above, but for different leve
 
 
 [ELECTORAL VOTES HISTOGRAMS]
-The black line signifies the majority rule. Clearly, Republicans attain more electoral votes, more often than do Democrats.
 
-They also consistently win more states.
-[State Bar Plots]
-
-In fact, as a state's population grows, so too does its propensity to end up Republican:
+Interestingly, as we decrease the amount of pre-apportioned votes, the number of electoral votes awarded to Democrats increases. Perhaps unexpectedly, this effect also holds true for Republicans:
 
 
+ELECTORAL VOTE BARPLOT GIF
+
+So, regardless of the number of electoral votes pre-apportioned, Republicans win more often than Democrats. 
+
+To get a more accurate idea of the number of election wins per party, we can examine the expected value of electoral votes per party, per electoral vote pre-apportionment. We can construct 95% confidence intervals around these estimates and assess our margin of error as well. 
+
+INSERT C.I. plot
+
+The x-axis in the above plot corresponds to the quantity of pre-apportioned electoral votes (0-3), while the y-axis corresponds to the total count of electoral votes received.
+
+Each dot (color-coded by party affiliation) in the above plot corresponds to that party's mean number of awarded electoral votes. The vertical bars branching off from these points are the 95% confidence intervals for that mean - i.e., the intervals that will capture the mean number of electoral votes in 95% of the cases.
+
+For every iteration, Republicans have a higher expected value of receiving more electoral votes (and therefore, more election victories) than Democrats.
+ What does this reveal about the 2016 election result? Well, Republicans would have won the election no matter what
 
 
 
 
-Talk about distributions
-What's interesting is that this consistency in Republican domination exists despite Democrats having more majority votes. Discuss More
-[ Insert Vote Barplot]
 
-Other interesting trends occur as well. As the population of a state increases, so too does its propensity to vote Republican:
 
-[insert scatter plot]
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 This result is unintuitive, but makes sense upon inspection. Geographically, Democrats tend to cluster in cities and coastal towns. Republicans, while mostly present in the middle of the country (the so-called 'flyover' states), are spread about the whole of the country. Thus, as a state expands, it has a higher probability of encompassing Republican counties than Democrat counties. DISCUSS PARTICULAR STATES?
 
