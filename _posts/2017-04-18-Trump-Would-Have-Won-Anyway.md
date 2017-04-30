@@ -44,7 +44,7 @@ Examples abound of state-level election outcome changing as a function of a stat
 
 Under the current electoral college format, each state is assigned a minimum of 3 electoral votes, leaving 385 remaining votes to be assigned based on state population.
 
-This process of pre-apportioning votes is often criticised for giving low-population states a disproportionate number of electors per capita e.g., [an electoral vote represents nearly four times as many people in California as in Wyoming[(http://www.huffingtonpost.com/william-petrocelli/its-time-to-end-the-electoral-college_b_12891764.html). However, concensus on the bias inherent in the electoral college is still a topic of much dispute.
+This process of pre-apportioning votes is often criticised for giving low-population states a disproportionate number of electors per capita e.g., [an electoral vote represents nearly four times as many people in California as in Wyoming](http://www.huffingtonpost.com/william-petrocelli/its-time-to-end-the-electoral-college_b_12891764.html). However, concensus on the bias inherent in the electoral college is still a topic of much dispute.
 
 Recall, the electoral vote distribution for the 2016 election was as follows:
 
@@ -62,17 +62,16 @@ First, we can view the number of states won by each party across the simulations
 
 ![Histogram of states won](https://github.com/jwilber/Randomized_Election/blob/master/images/states_won1.png?raw=true "title-1")
 
-Republicans clearly win much more states than Democrats. In fact, in every randomization, Repbulicans win more states than Democrats. This result isn't surprisng, it's actually expected:
+Republicans clearly win much more states than Democrats. In fact, as a state's population grows, so too does its propensity to vote Republican:
 
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/scatterplots.gif?raw=true "title-1")
 
-While it's true that Democratic counties tend to have much higher populations, the United States has far more Republican counties than Democrat counties. Thus, during randomization the probability of a state absorbing a red county (and therefore a red population) is far more likely on average than a blue county. 
+This finding isn't very surprising. While it's true that Democratic counties tend to have much higher populations, the United States has far more Republican counties than Democrat counties. Thus, during randomization, the probability of a state absorbing a red county (and therefore more red population) is far more likely on average than the state absorbing a blue county. Thus, as a state grows larger, it's more likely to vote Republican.
 
+ That said, this difference in state victories isn't necessarily important. In America's winner-take-all election process, what really matters is the number of electoral votes each state brings. 
 
- This difference in state victories isn't necessarily important. In America's winner-take-all election process, what really matters is the number of electoral votes each state brings.
-
-![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true width='100' height='100	')
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true width='100' height='100')
 
 
 In this case, Repbulicans *are* accrueing more electoral votes than Democrats. What's more, they're doing so more often.
