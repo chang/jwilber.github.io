@@ -7,16 +7,14 @@ theme: cosmo
 
 # Trump Would Have Won Anyway
 
+Despite priding itself on being a world symbol of democracy, the United States of America's election process, the [electoral college](https://en.wikipedia.org/wiki/Electoral_College_(United_States), has found itself in a position of criticism. 
 
 
-The United States of America prides itself on being the world symbol of democracy; a place where eve ..., However in light of recent elections, it's election process,the [electoral college](), has found itself in a position of criticism. 
-
-
-On the one hand, some people claim that it's necessary and gives a voice to states that otherwise would go ignored, while some claim that it's unfair for giving a disproportionate amount of votes to low-population states. Others claim it's arbitrary - after all, [reforming just two state borders and shifting only four counties]() would have resulted in a Hillary Clinton victory. 
+On the one hand, some Americans claim that the electoral college is necessary because it provides a voice to states that otherwise would go ignored. Some Americans claim the opposite, that it's unfair for reason that it yields a disproportionate amount of votes to low-population states. Still others claim that it's arbitrary and unnecessary - after all, [reforming just two state borders and shifting only four counties](https://www.washingtonpost.com/news/wonk/wp/2016/11/29/how-the-electoral-college-gerrymanders-the-presidential-vote/?utm_term=.8a9055cd4263) would have resulted in a Hillary Clinton victory. 
 
 
 
-This post investigates the elctoral college. Specifically, it aims to answer the following question: 
+This blog post investigates the elctoral college. Specifically, it aims to answer the following question: 
 
 ***Does the electoral college favor one party over another, and if so, did this bias affect the election outcome?***
 
@@ -24,7 +22,7 @@ This post investigates the elctoral college. Specifically, it aims to answer the
 
 ### Randomizing the Election
 
-To investigate any bias inheret in the electoral college, we'll randomize state creation in the United States of America. 
+To investigate any bias inheret in the electoral college, we'll randomize state creation in the United States of America. Then, we'll use 2016 county-level election data to investigate election outcomes. 
 
 ![Random State Constructions](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates2.gif?raw=true "title-1")
 
@@ -32,24 +30,21 @@ In this way we can simulate multiple electoral outcomes using the same data, and
 
  ![Random States Color-coded by Victory](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstateswins2.gif?raw=true	 "title-2")
 
-We can see multiple examples of state outcomes changing due to the counties they encompass. For example, when we view the vote distribution per state, we can see quite a lot of differences:
-
-
 Examples abound of state-level election outcome changing as a function of a state's county composition. For example, we can see that the so-called Democratic '*Costal Elite Party*' stereotype usually holds true - states touching the West Coast overwhelmingly turn blue. However, look at Nevada in the above sample of simulations; as state size ventures too far inward, the vast number of Republican counties overtakes the Democrat majority, and the state ends up voting Red. 
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_per_state2.gif?raw=true "title-1")
 
 
- When looking at eah states vote count per party, we see a lot of variance. Regardless of the implications this variance has on the arbitrariness of state boundaries, what's interesting is that the same geographic trends seem to emerge: The Democrats (the so-called:) hold the coast, while the Republicans (the so-called:) hold the central sea-of-red.
+ When looking at individual vote count per state, this variance is made more clear. For some states, especially those in the so-called 'flyover' states of the Midwest, not much variance in electin outcome occurs. Other states, however, such as California and New York, change pretty often. This is because Democrats tend to cluster in cities. These cities usually encompass a majority portion of the states votes, so when they're not included in a states composition (e.g., when New York doesn't contain New York City), the state vote composition changes radically. Regardless of the implications this variance may or may not have on the arbitrariness of state boundaries, what's interesting is that the same geographic trends emerge in the majority of simulatiosn: Democrats hold the coasts, Republicans hold the center.
 
 ***
 
 
 ### The Electoral College
 
-Under the current scheme, each state is assigned a minimum of 3 electoral votes, leaving 385 remaining votes to be assigned based on state population.
+Under the current electoral college format, each state is assigned a minimum of 3 electoral votes, leaving 385 remaining votes to be assigned based on state population.
 
-This process of pre-apportioning votes is often criticised for giving low-population states a disproportionate number of electors per capita (e.g., an electoral vote represents nearly four times as many people in California as in Wyoming). However, concensus on the bias inherent in the electoral college is still a topic of much dispute.
+This process of pre-apportioning votes is often criticised for giving low-population states a disproportionate number of electors per capita e.g., [an electoral vote represents nearly four times as many people in California as in Wyoming[(http://www.huffingtonpost.com/william-petrocelli/its-time-to-end-the-electoral-college_b_12891764.html). However, concensus on the bias inherent in the electoral college is still a topic of much dispute.
 
 Recall, the electoral vote distribution for the 2016 election was as follows:
 
@@ -60,7 +55,7 @@ Recall, the electoral vote distribution for the 2016 election was as follows:
 
 
 
-Using the above randomization scheme, we can produce multiple election outcomes and view the distribution of obtained electoral votes per party. In this way, we can get better visualize the distribution of possible election outcomes, as well as measure the likelihood of obtaining the results we did.
+Using the previously described randomization scheme, we will produce multiple election outcomes and view the distribution of obtained electoral votes per party. In this way, we can get better visualize the distribution of possible election outcomes, as well as assess the likelihood of obtaining the results we did.
 
 First, we can view the number of states won by each party across the simulations.
 
@@ -114,11 +109,33 @@ The x-axis in the above plot corresponds to the quantity of pre-apportioned elec
 Each dot (color-coded by party affiliation) in the above plot corresponds to that party's mean number of awarded electoral votes. The vertical bars branching off from these points are the 95% confidence intervals for that mean - i.e., the intervals that will capture the mean number of electoral votes in 95% of the cases.
 
 For every iteration, Republicans have a higher expected value of receiving more electoral votes (and therefore, more election victories) than Democrats.
- What does this reveal about the 2016 election result? Well, Republicans would have won the election no matter what
+
+People criticise the electoral college for saying that it gives unequal representation to smaller states. We removed this unequal representation and showed that no matter what the pre-apportioned amount of electoral college votes, Republicans still would have won the election. This despite there having been more Democratic votes in total. This is true both for simulated and non-simulated states.
+
+
+So does the electoral college favor Republicans? In a way, yes. What really appears to be occurring is that the winner-take-all style of the electoral college shows favor to that party with the highest number of counties across the map. In 2016, these counties just happened to be the Republicans ,though it's likely they will remain Republican in the future.
+
+So can we conclude that the election outcome was unfair? No. The United States operates on a winner-take-all system; that's the system by which our data corresponds and so that's the system we simulated. 
+
+Conflating the overall majority vote with the 'correct' election outcome is erroneous because that sample is inaccurate. Why? Because Republicans in blue states (e.g., California) often don't bother voting because they know they're vote will go blue. The same holds true for Democrats in overwhelmingly Republican states. Thus it's often the case that in a winner-take-all system, the majority vote is an inaccurate indication of the true majority vote.
+
+```
 
 
 
+nly insofar as there appears to be a bias in favor of the number of counties
 
+In its current implementation with 3 apportioned votes per state: yes. Is this biased system responsibe for swinging the election to Republicans? No.
+
+
+ What does this reveal about the 2016 election result? 
+
+Republicans would have won under any 
+ Well, under any winner-take-all electoral college system, regardless of vote counts, Republicans would have won.
+
+
+
+This may come as a surprise to those who chalked the Republican victory up to the 'unfair' three votes pre-apportioned to every state. Even more surprising is this result given that the overall vote count was (marginally) majority Democrat. What we can take away from this is that the 
 
 
 
@@ -147,7 +164,7 @@ Let's observe what happens when we change the number of allotted electoral colle
 Conclude
 Ideally, if you live in a democracy, then regardless of your political loyalty you want a representative system. That is, you want a system where majority vote dictates rule.
 
-People criticise the electoral college for saying that it gives unequal representation to smaller states. We removed this unequal representation and showed that no matter what the pre-apportioned amount of electoral college votes, Republicans still would have won the election. This despite there having been more Democratic votes in total. This is true both for simulated and non-simulated states.
+
 
 So does the electoral college favor Republicans? In its current implementation with 3 apportioned votes per state: yes. Is this biased system responsibe for swinging the election to Republicans? No.
 
