@@ -59,6 +59,9 @@ Using the previously described randomization scheme, we will produce multiple el
 
 First, we can view the number of states won by each party across the simulations.
 
+
+![Histogram of states won](https://github.com/jwilber/Randomized_Election/blob/master/images/states_won1.png?raw=true "title-1")
+
 Republicans clearly win much more states than Democrats. In fact, in every randomization, Repbulicans win more states than Democrats. This result isn't surprisng, it's actually expected:
 
 
