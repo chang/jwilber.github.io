@@ -7,7 +7,7 @@ theme: cosmo
 
 # Trump Would Have Won Anyway
 
-Despite priding itself on being a world symbol of democracy, the United States of America's election process, the [electoral college](https://en.wikipedia.org/wiki/Electoral_College_(United_States), has found itself in a position of criticism. 
+Despite priding itself on being a world symbol of democracy, the United States of America's election process, the [electoral college](https://en.wikipedia.org/wiki/Electoral_College_(United_States)), has found itself in a position of criticism. 
 
 
 On the one hand, some Americans claim that the electoral college is necessary because it provides a voice to states that otherwise would go ignored. Some Americans claim the opposite, that it's unfair for reason that it yields a disproportionate amount of votes to low-population states. Still others claim that it's arbitrary and unnecessary - after all, [reforming just two state borders and shifting only four counties](https://www.washingtonpost.com/news/wonk/wp/2016/11/29/how-the-electoral-college-gerrymanders-the-presidential-vote/?utm_term=.8a9055cd4263) would have resulted in a Hillary Clinton victory. 
@@ -26,16 +26,18 @@ To investigate any bias inheret in the electoral college, we'll randomize state 
 
 ![Random State Constructions](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstates2.gif?raw=true "title-1")
 
-In this way we can simulate multiple electoral outcomes using the same data, and gain a more accurate idea of the role the elctoral college plays in our elections.
+In this way we can simulate multiple election outcomes using the same data, gaining a more accurate idea of the role the electoral college plays in American elections.
 
  ![Random States Color-coded by Victory](https://github.com/jwilber/Randomized_Election/blob/master/images/randomstateswins2.gif?raw=true	 "title-2")
 
-Examples abound of state-level election outcome changing as a function of a state's county composition. For example, we can see that the so-called Democratic '*Costal Elite Party*' stereotype usually holds true - states touching the West Coast overwhelmingly turn blue. However, look at Nevada in the above sample of simulations; as state size ventures too far inward, the vast number of Republican counties overtakes the Democrat majority, and the state ends up voting Red. 
+Examples abound of state-level election outcome changing as a function of a state's county composition. For example, the so-called Democratic '*Costal Elite Party*' stereotype usually holds true - states touching the West Coast overwhelmingly vote blue. However, look at Nevada in the above sample of simulations; as state size ventures too far inward, the vast number of Republican counties overtakes the Democrat majority, and the state ends up voting Red. 
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_per_state2.gif?raw=true "title-1")
 
 
- When looking at individual vote count per state, this variance is made more clear. For some states, especially those in the so-called 'flyover' states of the Midwest, not much variance in electin outcome occurs. Other states, however, such as California and New York, change pretty often. This is because Democrats tend to cluster in cities. These cities usually encompass a majority portion of the states votes, so when they're not included in a states composition (e.g., when New York doesn't contain New York City), the state vote composition changes radically. Regardless of the implications this variance may or may not have on the arbitrariness of state boundaries, what's interesting is that the same geographic trends emerge in the majority of simulatiosn: Democrats hold the coasts, Republicans hold the center.
+ When looking at individual vote count per state, this variance is made more clear. Some states, especially those in the so-called '*flyover*' states of the Midwest, have almost no variance in vote outcome. Other states, however, such as California and New York, change often. 
+
+ This variance in traditionally blue states occurs because Democrats tend to cluster in cities. These cities usually encompass a majority portion of their state's votes, so when they're not included in a state's composition (e.g., when New York doesn't contain New York City), the state vote composition changes radically. Regardless of the implications this variance may or may not have on the arbitrariness of state boundaries, what's interesting is that the same geographic trends emerge in the majority of simulatiosn: Democrats hold the coasts, Republicans hold the center.
 
 ***
 
@@ -44,9 +46,9 @@ Examples abound of state-level election outcome changing as a function of a stat
 
 Under the current electoral college format, each state is assigned a minimum of 3 electoral votes, leaving 385 remaining votes to be assigned based on state population.
 
-This process of pre-apportioning votes is often criticised for giving low-population states a disproportionate number of electors per capita e.g., [an electoral vote represents nearly four times as many people in California as in Wyoming](http://www.huffingtonpost.com/william-petrocelli/its-time-to-end-the-electoral-college_b_12891764.html). However, concensus on the bias inherent in the electoral college is still a topic of much dispute.
+This process of pre-apportioning votes is often criticised for giving low-population states a disproportionate number of electors per capita; e.g., [an electoral vote represents nearly four times as many people in California as in Wyoming](http://www.huffingtonpost.com/william-petrocelli/its-time-to-end-the-electoral-college_b_12891764.html). However, concensus on the bias inherent in the electoral college is still a topic of much dispute.
 
-Recall, the electoral vote distribution for the 2016 election was as follows:
+Recall, the electoral vote distribution for the 2016 election:
 
 | Party      | # Electoral Votes |
 |------------|-------------------|
@@ -55,14 +57,17 @@ Recall, the electoral vote distribution for the 2016 election was as follows:
 
 
 
-Using the previously described randomization scheme, we will produce multiple election outcomes and view the distribution of obtained electoral votes per party. In this way, we can get better visualize the distribution of possible election outcomes, as well as assess the likelihood of obtaining the results we did.
-
-First, we can view the number of states won by each party across the simulations.
+Using the previously described state randomization scheme, we will simulate multiple elections. In this way, we can get better visualize the distribution of possible election outcomes, as well as assess the likelihood of obtaining the results we did.
 
 
-![Histogram of states won](https://github.com/jwilber/Randomized_Election/blob/master/images/states_won1.png?raw=true "title-1")
+First, we can view the number of states won by each party across all of the simulations:
 
-Republicans clearly win much more states than Democrats. In fact, as a state's population grows, so too does its propensity to vote Republican:
+
+![Histogram of states won](https://github.com/jwilber/Randomized_Election/blob/master/images/states_won1.png?raw=true "title-1" width="10" height="10")
+
+Republicans clearly win much more states than Democrats. In fact, Republicans won more states than Democrats in every single simulated election. 
+
+Another interesting trend occurs across the simulations: as a state's population grows, so too does its propensity to vote Republican:
 
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/scatterplots.gif?raw=true "title-1")
