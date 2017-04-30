@@ -56,6 +56,10 @@ Recall, the electoral vote distribution for the 2016 election:
 | Republican | 306               |
 
 
+Also recall, Democrats lead in total votes for the 2016 election:
+
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_per_state2.gif?raw=true "title-1")
+
 
 Using the previously described state randomization scheme, we will simulate multiple elections. In this way, we can get better visualize the distribution of possible election outcomes, as well as assess the likelihood of obtaining the results we did.
 
@@ -65,49 +69,52 @@ First, we can view the number of states won by each party across all of the simu
 
 ![Histogram of states won](https://github.com/jwilber/Randomized_Election/blob/master/images/states_won1.png?raw=true "title-1" width="10" height="10")
 
-Republicans clearly win much more states than Democrats. In fact, Republicans won more states than Democrats in every single simulated election. 
+Republicans clearly win much more states than Democrats. In fact, Republicans won more states than Democrats across every single simulated election. 
 
-Another interesting trend occurs across the simulations: as a state's population grows, so too does its propensity to vote Republican:
+A related, interesting trend occurs across the simulations: as a state's population grows, so too does its propensity to vote Republican:
 
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/scatterplots.gif?raw=true "title-1")
 
-This finding isn't very surprising. While it's true that Democratic counties tend to have much higher populations, the United States has far more Republican counties than Democrat counties. Thus, during randomization, the probability of a state absorbing a red county (and therefore more red population) is far more likely on average than the state absorbing a blue county. Thus, as a state grows larger, it's more likely to vote Republican.
+This finding isn't very surprising. While it's true that Democratic counties tend to have much higher populations, the 2016 election saw far more Republican counties than Democrat counties. Thus, during randomization, the probability of a state absorbing a red county (and therefore more red population) is far more likely on average than the state absorbing a blue county. Thus, as a state grows larger, it's more likely to vote Republican.
 
  That said, this difference in state victories isn't necessarily important. In America's winner-take-all election process, what really matters is the number of electoral votes each state brings. 
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev_1.png?raw=true width='100' height='100')
 
 
-In this case, Repbulicans *are* accrueing more electoral votes than Democrats. What's more, they're doing so more often.
+In this case, Republicans *are* accrueing more electoral votes than Democrats across all simulations. What's more, they're doing so more often.
 
 All of this, of course, culminates into more election victories for Republicans:
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec1.png?raw=true height='300' width='300')
 
-So clearly Republicans attain much more victories than do Democrats, despite the Democrats having a majority total vote amount. Is this result because the electoral college in its current form is biased towards Republicans? Or would the outcome be the same regardless of pre-apportionment?
+So clearly Republicans attain much more victories than do Democrats, despite the Democrats having a majority total vote count. Is this result because the electoral college in its current 385 free votes form is biased in favor of Republicans? Or would the outcome be the same regardless of electoral vote pre-apportionment?
 
 
 ***
 
 ### Investigating Bias in the Electoral College
 
-To investigate, we can repeat the same analyses as above, but for different levels of pre-apportioned votes. In particular, we'll examine what happens as we distribute 3, 2, 1, and 0 pre-apportioned votes.
+To investigate, we'll repeat the same analyses as above, but for different levels of pre-apportioned votes. In particular, we'll examine what happens as we distribute 3, 2, 1, and 0 pre-apportioned votes, corresponding to ,,, and 538 free votes, respectively.
 
 
-
-
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/hist_ev.gif?raw=true width='100' height='100')
 
 [ELECTORAL VOTES HISTOGRAMS]
 
 Interestingly, as we decrease the amount of pre-apportioned votes, the number of electoral votes awarded to Democrats increases. Perhaps unexpectedly, this effect also holds true for Republicans:
 
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec.gif?raw=true width='100' height='100')
 
 ELECTORAL VOTE BARPLOT GIF
 
 So, regardless of the number of electoral votes pre-apportioned, Republicans win more often than Democrats. 
 
 To get a more accurate idea of the number of election wins per party, we can examine the expected value of electoral votes per party, per electoral vote pre-apportionment. We can construct 95% confidence intervals around these estimates and assess our margin of error as well. 
+
+
+![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/conint_plot.png?raw=true width='100' height='100')
 
 INSERT C.I. plot
 
