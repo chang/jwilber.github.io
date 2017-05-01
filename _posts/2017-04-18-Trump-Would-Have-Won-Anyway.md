@@ -109,10 +109,6 @@ Interestingly, as we decrease the amount of pre-apportioned votes, the number of
 
 ELECTORAL VOTE BARPLOT GIF
 
-***
-
-### Conclusions
-
 
 So, regardless of the number of electoral votes pre-apportioned, Republicans win more often than Democrats. 
 
@@ -128,6 +124,11 @@ The x-axis in the above plot corresponds to the quantity of pre-apportioned elec
 Each dot (color-coded by party affiliation) in the above plot corresponds to that party's mean number of awarded electoral votes. The vertical bars branching off from these points are the 95% confidence intervals for that mean - i.e., the intervals that will capture the mean number of electoral votes in 95% of the cases.
 
 For every iteration, Republicans have a higher expected value of receiving more electoral votes (and therefore, more election victories) than Democrats.
+
+***
+
+### Conclusions
+
 
 People criticise the electoral college for saying that it gives unequal representation to smaller states. We removed this unequal representation and showed that no matter what the pre-apportioned amount of electoral college votes, Republicans still would have won the election. This despite there having been more Democratic votes in total. This is true both for simulated and non-simulated states.
 
