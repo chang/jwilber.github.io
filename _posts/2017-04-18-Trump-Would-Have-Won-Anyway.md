@@ -103,11 +103,16 @@ To investigate, we'll repeat the same analyses as above, but for different level
 
 [ELECTORAL VOTES HISTOGRAMS]
 
-Interestingly, as we decrease the amount of pre-apportioned votes, the number of electoral votes awarded to Democrats increases. Perhaps unexpectedly, this effect also holds true for Republicans:
+Interestingly, as we decrease the amount of pre-apportioned votes, the number of electoral votes awarded to Democrats increases. Unexpectedly, however, the magnitude of this change isn't large enough to affect the majoritiy of election outcomes:
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec.gif?raw=true width='100' height='100')
 
 ELECTORAL VOTE BARPLOT GIF
+
+***
+
+### Conclusions
+
 
 So, regardless of the number of electoral votes pre-apportioned, Republicans win more often than Democrats. 
 
