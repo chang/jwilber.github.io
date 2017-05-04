@@ -56,10 +56,7 @@ Recall, the electoral vote distribution for the 2016 election:
 | Republican | 306               |
 
 
-Also recall, Democrats lead in total votes for the 2016 election:
-
-![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/votes_per_state2.gif?raw=true "title-1")
-
+Also recall, Democrats lead in total votes for the 2016 election.
 
 Using the previously described state randomization scheme, we will simulate multiple elections. In this way, we can get better visualize the distribution of possible election outcomes, as well as assess the likelihood of obtaining the results we did.
 
@@ -107,7 +104,6 @@ Interestingly, as we decrease the amount of pre-apportioned votes, the number of
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/total_elec.gif?raw=true width='100' height='100')
 
-ELECTORAL VOTE BARPLOT GIF
 
 
 So, regardless of the number of electoral votes pre-apportioned, Republicans win more often than Democrats. 
@@ -117,7 +113,6 @@ To get a more accurate idea of the number of election wins per party, we can exa
 
 ![Votes by State](https://github.com/jwilber/Randomized_Election/blob/master/images/conint_plot.png?raw=true width='100' height='100')
 
-INSERT C.I. plot
 
 The x-axis in the above plot corresponds to the quantity of pre-apportioned electoral votes (0-3), while the y-axis corresponds to the total count of electoral votes received.
 
@@ -141,51 +136,3 @@ Conflating the overall majority vote with the 'correct' election outcome is erro
 
 ```
 
-
-
-nly insofar as there appears to be a bias in favor of the number of counties
-
-In its current implementation with 3 apportioned votes per state: yes. Is this biased system responsibe for swinging the election to Republicans? No.
-
-
- What does this reveal about the 2016 election result? 
-
-Republicans would have won under any 
- Well, under any winner-take-all electoral college system, regardless of vote counts, Republicans would have won.
-
-
-
-This may come as a surprise to those who chalked the Republican victory up to the 'unfair' three votes pre-apportioned to every state. Even more surprising is this result given that the overall vote count was (marginally) majority Democrat. What we can take away from this is that the 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-This result is unintuitive, but makes sense upon inspection. Geographically, Democrats tend to cluster in cities and coastal towns. Republicans, while mostly present in the middle of the country (the so-called 'flyover' states), are spread about the whole of the country. Thus, as a state expands, it has a higher probability of encompassing Republican counties than Democrat counties. DISCUSS PARTICULAR STATES?
-
-
-
-Playing with the Electoral College
-
-So how exactly does the electoral college favor Republicans? 3-vote uniform value. This isn't new information, but hopefully the above simulations reveal it's problem.
-Let's observe what happens when we change the number of allotted electoral college votes
-[change] analyze [change] analyze [change] analyze
-Conclude
-Ideally, if you live in a democracy, then regardless of your political loyalty you want a representative system. That is, you want a system where majority vote dictates rule.
-
-
-
-So does the electoral college favor Republicans? In its current implementation with 3 apportioned votes per state: yes. Is this biased system responsibe for swinging the election to Republicans? No.
-
-Finally, at this stage you may be wondering why we're not discussing the total per-party votes in the election. Our data was generated from an electoral college system election, so inferences about that can be discussed with decent accuracy.
