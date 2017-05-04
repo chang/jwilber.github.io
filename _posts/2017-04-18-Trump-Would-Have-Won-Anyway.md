@@ -124,15 +124,16 @@ For every iteration, Republicans have a higher expected value of receiving more 
 
 ### Conclusions
 
-
 People criticise the electoral college for saying that it gives unequal representation to smaller states. We removed this unequal representation and showed that no matter what the pre-apportioned amount of electoral college votes, Republicans still would have won the election. This despite there having been more Democratic votes in total. This is true both for simulated and non-simulated states.
 
+Let's address what we set out to answer:
 
-So does the electoral college favor Republicans? In a way, yes. What really appears to be occurring is that the winner-take-all style of the electoral college shows favor to that party with the highest number of counties across the map. In 2016, these counties just happened to be the Republicans ,though it's likely they will remain Republican in the future.
+**Does the Electoral College favor Repbulicans?**
+In a way, yes. What really appears to be occurring is that the winner-take-all style of the electoral college shows favor to that party with the highest number of counties across the map. In 2016, these counties happened to be the Republicans,though it's likely they will remain Republican in the future.
 
-So can we conclude that the election outcome was unfair? No. The United States operates on a winner-take-all system; that's the system by which our data corresponds and so that's the system we simulated. 
+**Did this bias affect the 2016 Election?**
+No. Under any electoral college system, regardless of the number of pre-apportioned votes, Republicans would have won. Under a pure vote-based system, we can't say who would have won. Why? Republicans in blue states (e.g., California) often don't bother voting because they know they're vote will go blue. The same holds true for Democrats in overwhelmingly Republican states. The majority vote for 2016 would be different in a non-winner-take-all system.
 
-Conflating the overall majority vote with the 'correct' election outcome is erroneous because that sample is inaccurate. Why? Because Republicans in blue states (e.g., California) often don't bother voting because they know they're vote will go blue. The same holds true for Democrats in overwhelmingly Republican states. Thus it's often the case that in a winner-take-all system, the majority vote is an inaccurate indication of the true majority vote.
 
 ```
 
