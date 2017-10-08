@@ -3,12 +3,12 @@ a, a:visited, a:active {
 }
 p {
   font-family: "Helvetica Neue";
-  font-size: 12px;
+  font-size: 15px;
 }
 
 h1 {
   font-family: "League Gothic";
-  font-size: 24px;
+  font-size: 30px;
 }
 
 .container {
@@ -19,18 +19,18 @@ h1 {
 
 .lead {
   margin-bottom: 20px;
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 300;
   line-height: 1.4;
   font-family: "Helvetica Neue"
 }
 
 .button {
-  min-width: 130px;
+  min-width: 150px;
   padding: 4px 5px;
   cursor: pointer;
   text-align: center;
-  font-size: 13px;
+  font-size: 15px;
   border: 1px solid #e0e0e0;
   text-decoration: none;
 }
