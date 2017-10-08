@@ -55,7 +55,7 @@ function bubbleChart() {
   // X locations of the year titles.
   var genreTitleX = {
     'Classic Rock': width/7 - 30,
-    'Indie': width/7 ,
+    'Indie': width/7 - 30,
     'Hip Hop': width/7*2.5,
     'Electronic': width/7 * 2.5,
     'Punk': width/7*46
