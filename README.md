@@ -1,77 +1,62 @@
-# Lagom
+# [Start Bootstrap - 1 Col Portfolio](https://startbootstrap.com/template-overviews/1-col-portfolio/)
 
-> #### *Lagom* is a Swedish word with no direct English equivalent, meaning "just the right amount"
+[1 Col Portfolio](https://startbootstrap.com/template-overviews/1-col-portfolio/) is a single column portfolio layout template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](https://startbootstrap.com/).
 
-Lagom, a [Jekyll][j] blog theme with just the right amount of style. 
+## Preview
 
-Extracted lovingly from [http://mdswanson.com][mds] for your enjoyment!
+[![1 Col Portfolio Preview](https://startbootstrap.com/assets/img/templates/1-col-portfolio.jpg)](https://blackrockdigital.github.io/startbootstrap-1-col-portfolio/)
 
+**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-1-col-portfolio/)**
 
+## Status
 
-* Responsive, based on [Skeleton][skeleton]
-* [Font Awesome][font-awesome] for icons
-* Open Sans from [Google web fonts][gfonts]
-* Built-in Atom feed
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/BlackrockDigital/startbootstrap-1-col-portfolio/master/LICENSE)
+[![npm version](https://img.shields.io/npm/v/startbootstrap-1-col-portfolio.svg)](https://www.npmjs.com/package/startbootstrap-1-col-portfolio)
+[![Build Status](https://travis-ci.org/BlackrockDigital/startbootstrap-1-col-portfolio.svg?branch=master)](https://travis-ci.org/BlackrockDigital/startbootstrap-1-col-portfolio)
+[![dependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-1-col-portfolio/status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-1-col-portfolio)
+[![devDependencies Status](https://david-dm.org/BlackrockDigital/startbootstrap-1-col-portfolio/dev-status.svg)](https://david-dm.org/BlackrockDigital/startbootstrap-1-col-portfolio?type=dev)
 
-[![Live Demo](https://img.shields.io/badge/view-live--demo-blue.svg?style=flat-square)](http://lagom.mdswanson.com/)
+## Download and Installation
 
-## Action Shots
-![](http://i.imgur.com/Pmzk4j1.png)
-![](http://i.imgur.com/CT2Xvug.png)
-![](http://i.imgur.com/XisjqW1.jpg)
+To begin using this template, choose one of the following options to get started:
+* [Download the latest release on Start Bootstrap](https://startbootstrap.com/template-overviews/1-col-portfolio/)
+* Install via npm: `npm i startbootstrap-1-col-portfolio`
+* Clone the repo: `git clone https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio.git`
+* [Fork, Clone, or Download on GitHub](https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio)
 
-## Installation
+## Usage
 
-- [Fork this repository][fork]
-- Clone it: `git clone https://github.com/YOUR-USER/lagom`
-- Install the [GitHub Pages gem][pages] (includes Jekyll): `bundle install`
-- Run the jekyll server: `jekyll serve`
+### Basic Usage
 
-You should have a server up and running locally at <http://localhost:4000>.
+After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
 
-## Customization
+### Advanced Usage
 
-Next you'll want to change a few things. Most of them can be changed directly in
-[theme.yml][config]. That's where you can add your social links, change the accent
-color, stuff like that.
+After installation, run `npm install` and then run `gulp dev` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
 
-There's a few other places that you'll want to change, too:
+## Bugs and Issues
 
-- [CNAME][cname]: If you're using this on GitHub Pages with a custom domain name, 
-  you'll want to change this to be the domain you're going to use. All that should 
-  be in here is a domain name on the first line and nothing else (like: `example.com`).
-- [favicon.png][favicon]: This is the icon in your browser's address bar. You should 
-  change it to whatever you'd like.
-- [logo.png][logo]: A square-ish image that appears in the upper-left corner
+Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/1-col-portfolio/).
 
-## Deployment
+## Custom Builds
 
-You should deploy with [GitHub Pages][pages] - it's just easier.
+You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
 
-All you should have to do is rename your repository on GitHub to be
-`username.github.io`. Since everything is on the `gh-pages` branch, you
-should be able to see your new site at <http://username.github.io>.
+## About
 
-## Licensing
+Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
 
-[MIT](https://github.com/swanson/lagom/blob/master/LICENSE) with no
-added caveats, so feel free to use this on your site without linking back to
-me or using a disclaimer or anything silly like that.
+* https://startbootstrap.com
+* https://twitter.com/SBootstrap
 
-## Contact
-I'd love to hear from you at [@_swanson][twitter]. Feel free to open issues if you
-run into trouble or have suggestions. Pull Requests always welcome.
+Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
 
-[j]: http://jekyllrb.com/
-[mds]: http://mdswanson.com
-[skeleton]: http://www.getskeleton.com/
-[font-awesome]: http://fortawesome.github.io/Font-Awesome/
-[gfonts]: http://www.google.com/fonts/specimen/Open+Sans
-[fork]: https://github.com/swanson/lagom/fork
-[config]: https://github.com/swanson/lagom/blob/master/_data/theme.yml
-[cname]: https://github.com/swanson/lagom/blob/master/CNAME
-[favicon]: https://github.com/swanson/lagom/blob/master/favicon.png
-[logo]: https://github.com/swanson/lagom/blob/master/logo.png
-[pages]: http://pages.github.com
-[twitter]: https://twitter.com/_swanson
-[pages]: https://github.com/github/pages-gem
+* http://davidmiller.io
+* https://twitter.com/davidmillerskt
+* https://github.com/davidtmiller
+
+Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+
+## Copyright and License
+
+Copyright 2013-2017 Blackrock Digital LLC. Code released under the [MIT](https://github.com/BlackrockDigital/startbootstrap-1-col-portfolio/blob/gh-pages/LICENSE) license.
