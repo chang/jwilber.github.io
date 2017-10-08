@@ -43,12 +43,12 @@ function bubbleChart() {
   };
 
   var genreCenters = {
-    'Classic Rock': { x: width/7 + 80, y: height / 2 - 50},
-    'Indie': { x: width/7 + 80, y: 450 },
-    'Hip Hop': { x: width/7*2.8 - 60, y: height / 2 - 50},
-    'Electronic': { x: width/7*2.8 - 60, y: 450 },
-    'Punk': { x: width/7*4 - 50, y: height / 2 - 50},
-    'Metal': { x: width/7*4 - 50, y: 450 },
+    'Classic Rock': { x: width/7 + 100, y: height / 2 - 50},
+    'Indie': { x: width/7 + 100, y: 450 },
+    'Hip Hop': { x: width/7*2.8 - 40, y: height / 2 - 50},
+    'Electronic': { x: width/7*2.8 - 40, y: 450 },
+    'Punk': { x: width/7*5- 50, y: height / 2 - 50},
+    'Metal': { x: width/7*5 - 50, y: 450 },
     'Other': { x: width/7*6 - 75, y: height / 2 - 50}
   };
 
@@ -58,9 +58,9 @@ function bubbleChart() {
     'Indie': width/7 - 50,
     'Hip Hop': width/7*2.5,
     'Electronic': width/7 * 2.5,
-    'Punk': width/7*4,
-    'Metal': width/7 * 4,
-    'Other': width/7 * 5.1 
+    'Punk': width/7*46
+    'Metal': width/7 * 6,
+    'Other': width/7 * 6.1 
 
   };
 
