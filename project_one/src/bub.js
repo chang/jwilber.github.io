@@ -47,9 +47,9 @@ function bubbleChart() {
     'Indie': { x: width/7 + 80, y: 450 },
     'Hip Hop': { x: width/7*2.8 - 60, y: height / 2 - 50},
     'Electronic': { x: width/7*2.8 - 60, y: 450 },
-    'Punk': { x: width/7*4 - 50, y: height / 2 - 50},
-    'Metal': { x: width/7*4 - 50, y: 450 },
-    'Other': { x: width/7*6 - 75, y: height / 2 - 50}
+    'Punk': { x: width/7*4 - 90, y: height / 2 - 50},
+    'Metal': { x: width/7*4 - 90, y: 450 },
+    'Other': { x: width/7*5 - 75, y: height / 2 - 50}
   };
 
   // X locations of the year titles.
