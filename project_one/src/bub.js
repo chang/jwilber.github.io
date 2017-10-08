@@ -58,9 +58,9 @@ function bubbleChart() {
     'Indie': width/7 - 30,
     'Hip Hop': width/7*2.5,
     'Electronic': width/7 * 2.5,
-    'Punk': width/7*46
-    'Metal': width/7 * 6,
-    'Other': width/7 * 6.1 
+    'Punk': width/7*4,
+    'Metal': width/7 * 4,
+    'Other': width/7 * 5.1 
 
   };
 
