@@ -49,13 +49,13 @@ function bubbleChart() {
     'Electronic': { x: width/7*2.8 - 40, y: 450 },
     'Punk': { x: width/7*5- 50, y: height / 2 - 50},
     'Metal': { x: width/7*5 - 50, y: 450 },
-    'Other': { x: width/7*6 - 75, y: height / 2 - 50}
+    'Other': { x: width/7*5.5- 75, y: height / 2 - 50}
   };
 
   // X locations of the year titles.
   var genreTitleX = {
-    'Classic Rock': width/7 - 50,
-    'Indie': width/7 - 50,
+    'Classic Rock': width/7 - 30,
+    'Indie': width/7 - 30,
     'Hip Hop': width/7*2.5,
     'Electronic': width/7 * 2.5,
     'Punk': width/7*46
@@ -68,11 +68,11 @@ function bubbleChart() {
   var genreTitleY = {
     'Classic Rock': 55,
     'Indie': 470,
-    'Hip Hop': 40,
+    'Hip Hop': 55,
     'Electronic': 470,
-    'Punk': 40,
+    'Punk': 55,
     'Metal': 470,
-    'Other': 40
+    'Other': 55
 
   };
 
