@@ -27,10 +27,10 @@
 
 
     <div id="toolbar">
-      <a href="#" id="all" class="button active">Artists</a>
+      <a href="#" id="all" class="button">Artists</a>
       <!-- <a href="#" id="year" class="button">Artists By Year</a> -->
       <a href="#" id="use" class="button">By Popularity</a>
-      <a href="#" id="genre" class="button">By Genre</a>
+      <a href="#" id="genre" class="button active">By Genre</a>
     </div>
     <div id="vis"></div>
 
@@ -49,10 +49,14 @@
     <p> The data was scraped from <a href="http://www.skatevideosite.com/">skatevideosite.com</a>. I wrote a quick Python script to grab the soundtracks for the top 2,000 most-viewed skate videos, and then manually removed very niche, largely unknown videos (e.g. videos from Brazil). After this step, the data was cleaned and formatted. Genres for the artists were obtained via the Spotify API.</p>
 
     <p> To produce the visualizations, I used Javascript's amazing D3 libary. In particular, I used the library's force-layout to produce the bubble-chart. This visualization was inspired by work from the <a href="">New York Times</a> and <a href="http://vallandingham.me/about.html"> Jim Vallandingham</a>, and the code is available in my Github.
+
+      <div id="vis"></div>
+
     <hr>
     <div class="footer">
       <p><a href="https://github.com/jwilber/jenkem_soundtrack">Here's the code.</a></p>
     </div>
+
   
   </div>
 
