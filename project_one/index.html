@@ -27,10 +27,10 @@
 
 
     <div id="toolbar">
-      <a href="#" id="all" class="button">Artists</a>
+      <a id="all" class="button">Artists</a>
       <!-- <a href="#" id="year" class="button">Artists By Year</a> -->
-      <a href="#" id="use" class="button">By Popularity</a>
-      <a href="#" id="genre" class="button active">By Genre</a>
+      <a id="use" class="button">By Popularity</a>
+      <a id="genre" class="button active">By Genre</a>
     </div>
     <div id="vis"></div>
 
@@ -63,7 +63,32 @@
   <script src="lib/d3.js"></script>
   <script src="src/tooltip.js"></script>
   <script src="src/bub.js"></script>
-  <script src="src/waffle_test.js"></script>
+  
+
+  <script src="waffle.js"></script>
+
+  <script type="text/javascript">
+
+    d3.csv("data/test_data.csv", function(err, data) {
+      if (err) {
+        console.error(err);
+      } else {
+        var waffle = new WaffleChart()
+          .selector(".chart")
+          .data(data)
+          .useWidth(false)
+          .label("Value of producers' sales in 2013, in thousands of dollars")
+          .size(12)
+          .gap(2)
+          .rows(20)
+          .columns(50)
+          .rounded(true)();
+      }
+    });
+
+    // source: http://statshb.capp.ca/SHB/Sheet.asp?SectionID=4&SheetID=265
+
+  </script>
   <div class="container">
   </div>
 
