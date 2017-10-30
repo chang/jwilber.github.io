@@ -17,31 +17,45 @@
         
         <hr>
 
-      <p class="lead">Skateboarding and music have been intrinsically linked since the inception of skateboarding in the 1950s and 1960s. While this relationship manifests itself in a number of different ways, nowhere is this connection made more explicit than skate videos.</p>
+      <p> I grew up in San Diego, California, and, like many other kids from Southern California, skateboarding was a huge part of my childhood. One of the biggest draws to skateboarding for me was the music associated with it. It was different then what they played on the radio. It felt counterculture. It felt exclusive. It felt <i>cool</i>.</p>
+
+      <p> Of course I was in no way unique with this sentiment - 
+      skateboarding and music have been intrinsically linked since the inception of skateboarding in the 1950s and 1960s, with many artists (e.g. Morrissey, Black Flag, Dinosaur Jr. etc.) having become heavily associated with skate culture.</p>
+
+      <p> And therein lives the purpose of this blog post: <blockquote class="lead"><b>Which music artists and genres are featued the most across the space of skateboarding?</b></blockquote>
+
+
+      <p> In the visualization below, each node corresponds to a separate artist, with size encoding the number of times that artist has been used in skate videos. The larger the area of circle, the more popular is the artist in skateboarding. Each node is color-coded by music genre. The toggle options allow you to arrange the data by various levels.</p>
+
+      <p>Hover over each node to get artist specific information.</p>
+
+<!-- 
       <p>Growing up, a large number of my favorite skate video parts were a product of the music being skated to, rather than the skating itself. I doubt that I'm alone in this sentiment.</p>
       <p> Music selection can make or break video parts. Some video parts, like <a href="https://www.youtube.com/watch?v=d47Hy061k0w">Jason Dill's</a> in Photosynthesis or <a href="https://www.youtube.com/watch?v=Wgthb2pQCaQ">Mark Appleyard's</a> in Flip's Sorry, have a great combination of both music and skating. Others, like <a href="">Matt Beach's</a> in Can't Stop, don't. Maybe I'm crazy, but part of me still things he would have had a successful career had his debut part not been set to his friends jam sesh. Oh well.</p>
       <!-- <p> Skate brands are often associated with their distint music selection. Insert examples i.e. Alien Workshop with its heavy use of J Mascis projects, Palace with it's lo-fi track beats (?), Emerica, Thrasher-shitty metal, And who can forget LE's<a href="">Theatrix</a>, notorious for it's unorthodox use of dubstep.</p> -->
-      <p>So what songs do skaters like to skate to? Morrissey? Dinosaur Jr.? Andre Nickatina? Explore below to find out.</p>
+<!--       <p>So what songs do skaters like to skate to? Morrissey? Dinosaur Jr.? Andre Nickatina? Explore below to find out.</p> -->
 
       <hr>
 
 
+
+
     <div id="toolbar">
-      <a id="all" class="button">Artists</a>
+      <a id="all" class="button active">Artists</a>
       <!-- <a href="#" id="year" class="button">Artists By Year</a> -->
       <a id="use" class="button">By Popularity</a>
-      <a id="genre" class="button active">By Genre</a>
+      <a id="genre" class="button">By Genre</a>
     </div>
     <div id="vis"></div>
 
-    <hr>
+ <!--    <hr>
     <h2> Not as unique as we thought </h2>
     <p> Despite associating ourselves with 'counter-culture' and specific music genres, our taste isn't as unique as we'd like to think.</p>
 
     <p> Insert waffle chart </p>
 
     <p> Comment on waffle chart </p>
-
+ -->
     <hr>
 
     <h2> Data and Methodology </h2>
@@ -50,14 +64,11 @@
 
     <p> To produce the visualizations, I used Javascript's amazing D3 libary. In particular, I used the library's force-layout to produce the bubble-chart. This visualization was inspired by work from the <a href="">New York Times</a> and <a href="http://vallandingham.me/about.html"> Jim Vallandingham</a>, and the code is available in my Github.
 
-      <div id="vis"></div>
-
     <hr>
     <div class="footer">
       <p><a href="https://github.com/jwilber/jenkem_soundtrack">Here's the code.</a></p>
     </div>
 
-  
   </div>
 
   <script src="lib/d3.js"></script>
@@ -65,32 +76,8 @@
   <script src="src/bub.js"></script>
   
 
-  <script src="waffle.js"></script>
+  
 
-  <script type="text/javascript">
-
-    d3.csv("data/test_data.csv", function(err, data) {
-      if (err) {
-        console.error(err);
-      } else {
-        var waffle = new WaffleChart()
-          .selector(".chart")
-          .data(data)
-          .useWidth(false)
-          .label("Value of producers' sales in 2013, in thousands of dollars")
-          .size(12)
-          .gap(2)
-          .rows(20)
-          .columns(50)
-          .rounded(true)();
-      }
-    });
-
-    // source: http://statshb.capp.ca/SHB/Sheet.asp?SectionID=4&SheetID=265
-
-  </script>
-  <div class="container">
-  </div>
 
 </body>
 </html>
