@@ -214,7 +214,7 @@ function bubbleChart() {
     // Fancy transition to make bubbles appear, ending with the
     // correct radius
     bubbles.transition()
-      .duration(2500)
+      .duration(3000)
       .attr('r', function (d) {return d.radius; });
 
     // Set initial layout to single group.
