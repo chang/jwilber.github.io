@@ -9,11 +9,57 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/artist_bubble.css">
+  <style>
+  svg {
+    display: block;
+    margin: 0 auto;
+}
+
+  body {
+    font-family: Helvetica, sans serif;
+    font-size: 16px;
+    color: #333;
+  }
+
+  .chart {
+    margin: 40px;
+    width: 620px;
+  }
+
+  .label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+
+  .legend {
+    padding-bottom: 7px;
+  }
+
+  .legend_item {
+    display: inline-block;
+    padding-right: 10px;
+    margin-bottom: 2px;
+  }
+
+  .legend_item_icon, .legend_item_text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 18px;
+  }
+
+  .legend_item_icon {
+    margin-right: 15px;
+    height: 15px;
+    width: 15px;
+  }
+</style>
+
 </head>
 <body>
   <div class="container">
     <h1>Music and Skateboarding</h1>
-        <p class="text-uppercase">by <a href="http://jwilber.github.io" target="_blank">Jared Wilber</a> &middot; September 2017</p>
+        <p class="text-uppercase">by <a href="http://jwilber.github.io" target="_blank">Jared Wilber</a> &middot; October 2017</p>
         
         <p> <i> Note - if you're on mobile the visualization won't properly line up with text - sorry! </i></p>
         <hr>
@@ -21,49 +67,41 @@
       <p> I grew up in San Diego, California, and, like many other kids from Southern California, skateboarding was a huge part of my childhood. One of the biggest draws to skateboarding for me was the music associated with it. It was different then what they played on the radio. It felt counterculture. It felt exclusive. It felt <i>cool</i>.</p>
 
       <p> Of course I was in no way unique with this sentiment - 
-      skateboarding and music have been intrinsically linked since the inception of skateboarding in the 1950s and 1960s, with many artists (e.g. Morrissey, Black Flag, Dinosaur Jr. etc.) having become heavily associated with skate culture.</p>
+      skateboarding and music have been intrinsically linked since the inception of skateboarding in the 1950s and 1960s, with many artists (e.g. Morrissey, Black Flag, Dinosaur Jr. etc.) heavily associated with skate culture.</p>
 
-      <p> And therein lives the purpose of this blog post: <blockquote class="lead"><b>Which music artists and genres are featued the most across the space of skateboarding?</b></blockquote>
+      <p> And therein lives the purpose of this blog post: <blockquote class="lead"><b>Which music artists and genres are featured the most in skateboarding videos?</b></blockquote></p>
 
 
       <p> In the visualization below, each node corresponds to a separate artist, with size encoding the number of times that artist has been used in skate videos. The larger the area of circle, the more popular is the artist in skateboarding. Each node is color-coded by music genre. The toggle options allow you to arrange the data by various levels.</p>
 
-      <p>Hover over each node to get artist specific information.</p>
-
-<!-- 
-      <p>Growing up, a large number of my favorite skate video parts were a product of the music being skated to, rather than the skating itself. I doubt that I'm alone in this sentiment.</p>
-      <p> Music selection can make or break video parts. Some video parts, like <a href="https://www.youtube.com/watch?v=d47Hy061k0w">Jason Dill's</a> in Photosynthesis or <a href="https://www.youtube.com/watch?v=Wgthb2pQCaQ">Mark Appleyard's</a> in Flip's Sorry, have a great combination of both music and skating. Others, like <a href="">Matt Beach's</a> in Can't Stop, don't. Maybe I'm crazy, but part of me still things he would have had a successful career had his debut part not been set to his friends jam sesh. Oh well.</p>
-      <!-- <p> Skate brands are often associated with their distint music selection. Insert examples i.e. Alien Workshop with its heavy use of J Mascis projects, Palace with it's lo-fi track beats (?), Emerica, Thrasher-shitty metal, And who can forget LE's<a href="">Theatrix</a>, notorious for it's unorthodox use of dubstep.</p> -->
-<!--       <p>So what songs do skaters like to skate to? Morrissey? Dinosaur Jr.? Andre Nickatina? Explore below to find out.</p> -->
+      <p>This piece is exploratory: hover over each node to get artist specific information, and feel free to drag them around (it's pretty fun).</p>
+     <p>So what songs do skaters like to skate to? Morrissey? Dinosaur Jr.? Andre Nickatina? Explore below to find out.</p> 
 
       <hr>
 
-
-
-
     <div id="toolbar">
       <a id="all" class="button active">Artists</a>
-      <!-- <a href="#" id="year" class="button">Artists By Year</a> -->
-      <a id="use" class="button">By Popularity</a>
       <a id="genre" class="button">By Genre</a>
+      <a id="use" class="button">By Popularity</a>
     </div>
     <div id="vis"></div>
 
- <!--    <hr>
-    <h2> Not as unique as we thought </h2>
-    <p> Despite associating ourselves with 'counter-culture' and specific music genres, our taste isn't as unique as we'd like to think.</p>
-
-    <p> Insert waffle chart </p>
-
-    <p> Comment on waffle chart </p>
- -->
     <hr>
+    <h2> A Closer Look At Genres </h2>
 
+    <p> Below we view the distribution of music genres across all collected skate videos. <br>
+      At 20%, indie music is the most popular genre. This is pretty expected. However, that Classic Rock is used more than hip hop and punk, two genres typically associated with skateboarding, is quite surprising. Spearheading this genre's dominance are The Beatles, Bowie, and The Rolling Stones. Hip Hop and Punk follow with values at 15% and 14%, respectively. The remaining genres are used less frequently, which, in my opinion, is a result of them being associated with specific skating aesthetics. </p>
+
+    <div class="chart"></div>
+
+    <hr>
     <h2> Data and Methodology </h2>
 
-    <p> The data was scraped from <a href="http://www.skatevideosite.com/">skatevideosite.com</a>. I wrote a quick Python script to grab the soundtracks for the top 2,000 most-viewed skate videos, and then manually removed very niche, largely unknown videos (e.g. videos from Brazil). After this step, the data was cleaned and formatted. Genres for the artists were obtained via the Spotify API.</p>
+    <p> The data was scraped from <a href="http://www.skatevideosite.com/">skatevideosite.com</a>. I wrote a quick Python script to grab the soundtracks for the top 2,000 most-viewed skate videos. To maintain data integrity, I manually removed niche, unknown videos that aren't a part of popular skate culture (e.g., random skate videos from South America). Genres for the artists, I used the Spotify API. After this step, the data cleaning, preprocessing, and plot prototypes were created using R. </p>
 
-    <p> To produce the visualizations, I used Javascript's amazing D3 libary. In particular, I used the library's force-layout to produce the bubble-chart. This visualization was inspired by work from the <a href="">New York Times</a> and <a href="http://vallandingham.me/about.html"> Jim Vallandingham</a>, and the code is available in my Github.
+    <p> To produce the final visualizations, I used Javascript's amazing D3 libary. The bubble chart was created via library's force-directed graph layout (without utilizing edges), and the plots were styled the nodes using CSS. The visualizations were inspired by work from the <a href="http://www.nytimes.com/interactive/2012/02/13/us/politics/2013-budget-proposal-graphic.html?mcubz=1">New York Times</a> and <a href="http://vallandingham.me/about.html"> Jim Vallandingham</a>.</p>
+
+    <p> All code is available in the associated GitHub repository. </p> 
 
     <hr>
     <div class="footer">
@@ -74,11 +112,28 @@
 
   <script src="lib/d3.js"></script>
   <script src="src/tooltip.js"></script>
-  <script src="src/bub.js"></script>
-  
+  <script src="src/bub2.js"></script>
+  <script src="waffle.js"></script>
 
-  
+  <script type="text/javascript">
 
+    d3.csv("data/genre_pcts.csv", function(err, data) {
+      if (err) {
+        console.error(err);
+      } else {
+        var waffle = new WaffleChart()
+          .selector(".chart")
+          .data(data)
+          .useWidth(false)
+          .size(17)
+          .gap(2)
+          .rows(20)
+          .columns(50)
+          .rounded(true)();
+      }
+    });
+
+  </script>
 
 </body>
 </html>
