@@ -16,63 +16,66 @@ function bubbleChart() {
   var center = { x: width / 2, y: height / 2 };
 
   var yearCenters = {
-    2008: { x: width / 3 - 200, y: height / 2 },
-    2009: { x: width / 2 - 200, y: height / 2 },
-    2010: { x: 2 * width / 3 - 200, y: height / 2 }
+    2008: { x: width / 3 - 200 + 30, y: height / 2 },
+    2009: { x: width / 2 - 200 + 30, y: height / 2 },
+    2010: { x: 2 * width / 3 - 200 + 30, y: height / 2 }
   };
 
   // X locations of the year titles.
   var yearsTitleX = {
-    2008: 160,
-    2009: width / 2,
-    2010: width - 160
+    2008: 160 + 30,
+    2009: width / 2 + 30,
+    2010: width - 160 + 30
   };
 
 
   var useCenters = {
-    'high': { x: 285, y: height / 2 },
-    'medium': { x: 470, y: height / 2 },
-    'low': { x: 660, y: height / 2 }
+    'high': { x: 285 + 30, y: height / 2 },
+    'medium': { x: 470 + 30, y: height / 2 },
+    'low': { x: 660 + 30, y: height / 2 }
   };
 
   // X locations of the year titles.
   var useTitleX = {
-    'high': 200,
-    'medium': 480,
-    'low': 780
+    'high': 200 + 30,
+    'medium': 480 + 30,
+    'low': 780 + 30
   };
 
   var genreCenters = {
-    'Classic Rock': { x: width/7 + 80, y: height / 2 - 50},
-    'Indie': { x: width/7 + 80, y: 450 },
-    'Hip Hop': { x: width/7*2.8 - 60, y: height / 2 - 50},
-    'Electronic': { x: width/7*2.8 - 60, y: 450 },
-    'Punk': { x: width/7*4 - 10, y: height / 2 - 50},
-    'Metal': { x: width/7*4 - 90, y: 450 },
-    'Other': { x: width/7*5 - 75, y: height / 2 - 50}
+    'Classic Rock': { x: width/7 + 80 + 30, y: height / 2 - 50},
+    'Indie/Alternative': { x: width/7 + 80 + 30, y: 450 },
+    'Hip Hop': { x: width/7*2.8 - 60 + 30, y: height / 2 - 50},
+    'Electronic': { x: width/7*2.8 - 60 + 30, y: 450 },
+    'Punk': { x: width/7*4 - 30, y: height / 2 - 50},
+    'Metal': { x: width/7*4 - 90 + 30, y: 450 },
+    'Other': { x: width/7*5 - 75 + 30, y: height / 2 - 75},
+    'Jazz/Soul': { x: width/7*5 - 75 + 30, y: 450}
   };
 
   // X locations of the year titles.
   var genreTitleX = {
-    'Classic Rock': width/7 - 30,
-    'Indie': width/7 - 30,
-    'Hip Hop': width/7*2.5,
-    'Electronic': width/7 * 2.5,
-    'Punk': width/7*4,
-    'Metal': width/7 * 4,
-    'Other': width/7 * 5.1 
+    'Classic Rock': width/7 - 30 + 30,
+    'Indie/Alternative': width/7 - 30 + 30,
+    'Hip Hop': width/7*2.5 + 30,
+    'Electronic': width/7 * 2.5 + 30,
+    'Punk': width/7*4 + 10,
+    'Metal': width/7 * 4 + 10,
+    'Other': width/7 * 5.1 + 50,
+    'Jazz/Soul': width/7 * 5.1 + 50
 
   };
 
   // Y locations of the year titles.
   var genreTitleY = {
     'Classic Rock': 55,
-    'Indie': 470,
+    'Indie/Alternative': 430,
     'Hip Hop': 55,
-    'Electronic': 470,
+    'Electronic': 430,
     'Punk': 55,
-    'Metal': 470,
-    'Other': 55
+    'Metal': 430,
+    'Other': 55,
+    'Jazz/Soul': 430,
 
   };
 
@@ -110,8 +113,8 @@ function bubbleChart() {
     .friction(0.9);
 
     var fillColor2 = d3.scale.ordinal()
-    .domain(['Classic Rock', 'Punk', 'Indie', 'Metal', 'Hip Hop', 'Electronic', 'Other'])
-    .range(['#fbb4ae', '#b3cde3', '#ccebc5', '#decbe4', '#fed9a6', '#ffffcc', '#fddaec']);
+    .domain(['Classic Rock', 'Punk', 'Indie/Alternative', 'Metal', 'Hip Hop', 'Electronic', 'Jazz/Soul'])
+    .range(['#fbb4ae', '#fddaec', '#ccebc5', '#decbe4', '#fed9a6', '#ffffcc','#b3cde3', '#f2f2f2']);
 
   // Nice looking colors - no reason to buck the trend
   var fillColor = d3.scale.ordinal()
@@ -205,13 +208,14 @@ function bubbleChart() {
       .attr('stroke', function (d) { return d3.rgb(fillColor2(d.genre)).darker(); })
       .attr('stroke-width', 2)
       .on('mouseover', showDetail)
-      .on('mouseout', hideDetail);
+      .on('mouseout', hideDetail)
+      .call(force.drag);
 
     // Fancy transition to make bubbles appear, ending with the
     // correct radius
     bubbles.transition()
-      .duration(2100)
-      .attr('r', function (d) { return d.radius; });
+      .duration(2500)
+      .attr('r', function (d) {return d.radius; });
 
     // Set initial layout to single group.
     groupBubbles();
@@ -413,7 +417,7 @@ function bubbleChart() {
     genre.enter().append('text')
       .attr('class', 'year')
       .attr('x', function (d) { return genreTitleX[d]; })
-      .attr('y', function (d) { console.log(genreTitleY[d]); return genreTitleY[d]; })
+      .attr('y', function (d) { return genreTitleY[d]; })
       .attr('text-anchor', 'middle')
       .text(function (d) { return d; });
   }
@@ -541,7 +545,7 @@ function addCommas(nStr) {
 }
 
 // Load the data.
-d3.csv('data/soundtrack_data.csv', display);
+d3.csv('data/soundtrack_data3.csv', display);
 
 // setup the buttons.
 setupButtons();
