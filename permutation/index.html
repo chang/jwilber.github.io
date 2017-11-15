@@ -84,7 +84,7 @@ ourData
 </code></pre>
   </div>
 
-<center><img src="/images/dataset1.png" /></center>
+<center><img src="https://jwilber.github.io/permutation/images/dataset1.png" /></center>
 
 <p>We'll use the following hypothesis scheme:</p>
 	<ul>
@@ -93,7 +93,7 @@ ourData
 	</ul>
 <p>When performing any analysis, it's always a good idea to carry out some exploratory data analysis (EDA). For this example, we'll be brief and create a plot to visualize what we expect the outcome of our test will be:</p>
 <br>
-<center><img src="/images/box.png" width="450px" height="450px"/></center>
+<center><img src="https://jwilber.github.io/permutation/images/box.png" width="450px" height="450px"/></center>
 <br>
 
 <p>The difference in centrality and spread certainly give credence to the hypothesis that the two groups come from different distributions.  Of course, we don't know for sure until we perform our test. Let's dive into our analysis and find out for sure.</p>
@@ -128,7 +128,7 @@ cat("Initial Test Statistic: ", currentStat)
 </code></pre>
   </div>
 <br>
-<center><img src="/images/teststat1.png" /></center>
+<center><img src="https://jwilber.github.io/permutation/images/teststat1.png" /></center>
 <br>
 <hr>
 
@@ -136,7 +136,7 @@ cat("Initial Test Statistic: ", currentStat)
 
 <p>Once we've decided upon our test statistic, we permute our data. Permuting the data is just a fancy way of saying to rearrange or shuffle the data in all possible manners. As our null hypothesis states that shuffling the data should have no effect, this process creates the backbone of our permutation test: our randomization distribution. Recall the number of permutations for n elements is <code>factorial(n)</code>, a function grows faster than even <code>exponential(n)</code>. See below plot.</p>
 <br>
-<center><img src="/images/growth.png" width="450px" height="450px" /></center>
+<center><img src="https://jwilber.github.io/permutation/images/growth.png" width="450px" height="450px" /></center>
 <br>
 
 
@@ -170,7 +170,7 @@ simPermDsn <- function(data, hasTrt, testStat, k=10000){
 
 <p>For our test statistic, we observe the following distribution of values:</p>
 <br>
-<center><img src="/images/hist1.png" width="450px" height="450px" /></center>
+<center><img src="https://jwilber.github.io/permutation/images/hist1.png" width="450px" height="450px" /></center>
 <br>
 
 <p>I should also briefly clarify that while the two are often confused,the above sampling scheme is not the same as bootstrapping. Bootstrapping samples with replacement.</p>
@@ -223,7 +223,7 @@ cat("p-value: ", p.val)
 
 <p>We can visualize this by observing our original test statistic's location in a sampled test statistic's distribution (symbolized by the vertical blue lines below). Recall that we calculated this earlier, obtaining a value of ~ 13:</p>
 <br>
-<center><img src="/images/hist2.png" width="450px" height="450px" /></center>
+<center><img src="https://jwilber.github.io/permutation/images/hist2.png" width="450px" height="450px" /></center>
 <br>
 <p>This test statistic looks pretty deep in the tails of our distribution. In fact, with a significance level of 0.05, our p-value is significant. Thus we reject our null hypothesis and conclude that there is a difference provided by the treatment.</p>
 
