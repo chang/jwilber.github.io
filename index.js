@@ -1,5 +1,5 @@
 //Width and height
-		var w = 900;
+		var w = 1100;
 		var h = 900;
 		var damper = 0.102;
 
