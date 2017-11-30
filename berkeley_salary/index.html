@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<link rel="stylesheet" href="./css/style4.css" type="text/css" media="screen"/>
+<body>
+<h1>U.C. Berkeley Salaries</h1>
+<h2> INSTRUCTOR SALARIES BY DEPARTMENT </h2>
+<p class="text-uppercase">by <a href="http://jwilber.github.io" target="_self">Jared Wilber</a> &middot; October 2017<br></p>
+
+<br>
+<p> Among all higher-education institutions in the world, U.C. Berkeley employs the highest number of Nobel Prize winners. (As a matter of fact, the Director of the research lab I worked at throughout my undergrad earned the award in Physics). That said, the faculty talent doesn't end at Nobel Prize winners - with a <a href="">top 5 worldwide ranking</a>, Berkeley's faculty is amazing across the board.<br></p>
+<p><br></p>
+<p> While the subject may be taboo, I was always curious how much my Professors earned. After all, any number of my professors could have gone into industry and made a killing, so surely they must be well-compensated by the University, right? Luckily for us, this information is public domain.</p>
+<p><br></p>
+<p> Below, I've visualized the data using a <a href="">tree map</a>. Each rectangle is sized by its salary, relative to others in the same selection. Colors denote teaching level (e.g. <i> Professor</i>, <i> Lecturer</i>, etc.), and the distribution of teaching level can be showed via the <i>Display Teaching Level</i> checkbox. The scroller allows for additional color subsetting by salary. Use the filter to select a major you'd like to investigate.</p>
+<!-- <p> Note - to keep some semblance of privacy, I've selected salaries dating 2 years back. If you're a Professor and you want to be removed, shoot me an email.</p> -->
+<p><br></p>
+
+<div id="filters">
+
+    <div id="leftfilters">
+
+        <div id="stateselect">
+            <label for="statesmenu">Filter by Department</label>
+            <select name="statesmenu" value="AAS">
+                <option value="nat" selected>All Departments</option>
+                <option disabled>─────────</option>
+                <option value="AAS">African American Studies</option>
+                <option value="AREP">Agricultural & Resource Economics</option>
+                <option value="ANTH">Anthroplogy</option>
+                <option value="ARCH">Architecture</option>
+                <option value="AH">Art History</option>
+                <option value="ARTP">Art Practice</option>
+                <option value="ASTRO">Astronomy</option>
+                <option value="BIOE">Bioengineering</option>
+                <option value="BIO">Biology</option>
+                <option value="BUS">Business</option>
+                <option value="CHEME">Chemical Engineering</option>
+                <option value="CHEM">Chemistry</option>
+                <option value="CRP">City & Regional Planning</option>
+                <option value="CEE">Civil & Environmental Engineering</option>
+                <option value="CLA">Classics</option>
+                <option value="CW">College Writing</option>
+                <option value="CL">Comparative Literature</option>
+                <option value="CS">Computer Science</option>
+                <option value="DEMO">Demography</option>
+                <option value="EPS">Earth and Planetary Science</option>
+                <option value="ECON">Economics</option>
+                <option value="EDU">Education</option>
+                <option value="EE">Electrical Engineering</option>
+                <option value="EECS">E.E.C.S.</option>
+                <option value="ERE">Energy & Resources Engineering</option>
+                <option value="ENG">English</option>
+                <option value="ENVD">Environmental Design</option>
+                <option value="ESPM">E.S.P.M.</option>
+                <option value="ES">Ethnic Studies</option>
+                <option value="FS">Film and Media</option>
+                <option value="FREN">French</option>
+                <option value="GWS">Gender & Women's Studies</option>
+                <option value="GEOG">Geography</option>
+                <option value="GERM">German</option>
+                <option value="HIST">History</option>
+                <option value="IEOR">Ind. Engineering & Ops Research</option>
+                <option value="INFO">Information</option>
+                <option value="IDS">Interdisciplinary Studies</option>
+                <option value="IAS">International & Area Studies</option>
+                <option value="JOUR">Journalism</option>
+                <option value="LAEP">Landscape Architecture</option>
+                <option value="LAW">LAW</option>
+                <option value="LING">Linguistics</option>
+                <option value="MSE">Material Science & Engineering</option>
+                <option value="MATH">Mathematics</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="MSE">Middle Eastern Studies</option>
+                <option value="MUS">Music</option>
+                <option value="NER">Near Eastern Studies</option>
+                <option value="NENG">Nuclear Engineering</option>
+                <option value="NS">Nutritional science</option>
+                <option value="OPT">Optometry</option>
+                <option value="PHIL">Philosophy</option>
+                <option value="PHY">Physics</option>
+                <option value="PS">Political Science</option>
+                <option value="PSYC">Psychology</option>
+                <option value="PH">Public Health</option>
+                <option value="PP">Public Policy</option>
+                <option value="RHET">Rhetoric</option>
+                <option value="SCAN">Scandinavian Languages</option>
+                <option value="SLL">Slavic Languages and Literature</option>
+                <option value="SW">Social Welfare</option>
+                <option value="SOC">Sociology</option>
+                <option value="SSAS">South & Southeast Asian Studies</option>
+                <option value="SP">Spanish and Portuguese</option>
+                <option value="STAT">Statistics</option>
+
+            </select>
+        </div><!-- @end #stateselect -->
+
+        <div id="showjobcats">
+            <form>
+              <input type="checkbox" name="parentcheck" value="on" id="parentcheck" />
+              <label for="parentcheck">Display Teaching Level </label>
+            </form>
+        </div><!-- @end #showjobcats -->
+    </div><!-- @end #leftfilters -->
+
+    <div id="rightfilters">
+        <div id="sliderholder">
+            <label></label>
+        </div>
+    </div><!-- @end #rightfilters -->
+
+    <div class="clr"></div>
+</div><!-- @end #filters -->
+
+<div id="jobs">
+    <div id="treemapholder"></div>
+    <div id="tooltip" class="hidden">
+        <div id="jobgroup"></div>
+        <div id="jobtitle"></div>
+        <div id="jobsalary"></div>
+        <div id="jobemptot"></div>
+    </div>
+    <div id="loadprogress">Loading Data&hellip;<br /><span class="progvalue">0</span>%</div>
+</div><!-- @end #jobs -->
+
+
+<div id="credits">
+    Author: Jared Wilber
+</div><!-- @end #credits -->
+
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="salary_tree.js"></script>
+
+<p><br></p>
+<h2> INSTRUCTOR SALARIES BY DEPARTMENT </h2>
+<br>
+<p> Additionally, we can juxtapose faculty salaries at a more macro level, observing how aggregate salaries differ between departments. I am particularly interested in this because students are often berated for the financial prospects of the major they chose (e.g.; <i> What's the difference between a pizza and {insert major}? A pizza can feed a family of five</i>). Is it the case that professors of these berated majors make less than their counterparts in other departments?<br></p>
+<p><br></p>
+<div id="barchart"></div>
+<p> While the subject may be taboo, I was always curious how much my Professors earned. After all, any number of my professors could have gone into industry and made a killing, so surely they must be well-compensated by the University, right? Luckily for us, this information is public domain.</p>
+<p><br></p>
+</body>
