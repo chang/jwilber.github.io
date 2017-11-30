@@ -28,9 +28,9 @@
 		//Original data
 		var dataset = {
 			nodes: [
-				{ name: "ABOUT ME", radius:90, loc: 'https://jwilber.github.io/about.html'},
-				{ name: "PROJECTS", radius:100,loc: 'https://jwilber.github.io/projects.html' },
-				{ name: "CONTACT", radius:90,loc: 'https://jwilber.github.io/contact.html' },
+				{ name: "ABOUT ME", radius:90, loc: 'https://jwilber.github.io/about.html', col: '#02818a'},
+				{ name: "PROJECTS", radius:100, loc: 'https://jwilber.github.io/projects.html', col: '#67a9cf'},
+				{ name: "CONTACT", radius:90, loc: 'https://jwilber.github.io/contact.html', col: '#bdc9e1'},
 				// { name: "Project 4", radius: 10}
 
 			],
@@ -42,7 +42,7 @@
 		};
 
 
-		var center = {x: w/2, y: h/2.5};
+		var center = {x: w/2, y: h/2};
 
 		var force = d3.layout.force()
 						.nodes(dataset.nodes)
@@ -69,7 +69,7 @@
 					.attr('r', function(d) {
 						return d.radius;
 					})
-					.style('fill', '#636363')
+					.style('fill', function(d) { return d.col;})
 					.attr('loc', function(d) {
 						return d.loc;
 					})
