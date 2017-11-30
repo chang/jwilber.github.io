@@ -28,9 +28,9 @@
 		//Original data
 		var dataset = {
 			nodes: [
-				{ name: "ABOUT ME", radius:70, loc: 'https://jwilber.github.io/about.html'},
-				{ name: "PROJECTS", radius:80,loc: 'https://jwilber.github.io/projects.html' },
-				{ name: "CONTACT", radius:70,loc: 'https://jwilber.github.io/contact.html' },
+				{ name: "ABOUT ME", radius:90, loc: 'https://jwilber.github.io/about.html'},
+				{ name: "PROJECTS", radius:100,loc: 'https://jwilber.github.io/projects.html' },
+				{ name: "CONTACT", radius:90,loc: 'https://jwilber.github.io/contact.html' },
 				// { name: "Project 4", radius: 10}
 
 			],
@@ -48,7 +48,7 @@
 						.nodes(dataset.nodes)
 						.links(dataset.edges)
 						.size([w, h])
-						.linkDistance([500])
+						.linkDistance([550])
 						.charge(charge)
 						.friction(.9)
 						.gravity(-.001)
