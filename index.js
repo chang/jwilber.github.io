@@ -42,7 +42,7 @@
 		};
 
 
-		var center = {x: w/2, y: h/2};
+		var center = {x: w/2 - 20, y: h/2};
 
 		var force = d3.layout.force()
 						.nodes(dataset.nodes)
