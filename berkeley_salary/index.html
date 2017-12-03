@@ -1,17 +1,78 @@
 <!DOCTYPE html>
+<head>
 <meta charset="utf-8">
 <link rel="stylesheet" href="./css/style4.css" type="text/css" media="screen"/>
-<body>
+<style>
+    .x-axis .tick{
+        font-size: 12px;
+    }
+
+    .y-axis .tick{
+        font-size: 9.5px;
+    }
+
+    .x-axis path, .y-axis path{
+            shape-rendering: crispEdges;
+            fill: none;
+            stroke: black;
+        }
+    .y-axis path {
+        stroke: white;
+    }
+
+    .x-axis path,
+  .x-axis line{
+    fill: none;
+    stroke: black;
+  }
+
+  .line{
+    fill: none;
+    stroke: blue;
+    stroke-width: 2px;
+  }
+
+  .tick line{
+    opacity: 1;
+    stroke-dasharray: 5,5;
+  }
+
+  #tooltip2 {
+ position: absolute;
+ width: 100px;
+ height: auto;
+ padding: 4px;
+ background-color: white;
+ -webkit-border-radius: 10px;
+ -moz-border-radius: 10px;
+ border-radius: 10px;
+ -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+ -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+ box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+ pointer-events: none;
+}
+#tooltip2.hidden {
+ display: none;
+}
+#tooltip2 p {
+ margin: 0;
+ font-size: 10px;
+ line-height: 13px;
+}
+
+</style>
+</head>
+<body bgcolor="#fbfdfc">
 <h1>U.C. Berkeley Salaries</h1>
 <h2> INSTRUCTOR SALARIES BY DEPARTMENT </h2>
 <p class="text-uppercase">by <a href="http://jwilber.github.io" target="_self">Jared Wilber</a> &middot; October 2017<br></p>
 
 <br>
-<p> Among all higher-education institutions in the world, U.C. Berkeley employs the highest number of Nobel Prize winners. (As a matter of fact, the Director of the research lab I worked at throughout my undergrad earned the award in Physics). That said, the faculty talent doesn't end at Nobel Prize winners - with a <a href="https://www.timeshighereducation.com/world-university-rankings/2017/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats">top 10 worldwide ranking</a>, Berkeley's faculty is amazing across the board.<br></p>
+<p> Among all higher-education institutions in the world, U.C. Berkeley employs the highest number of Nobel Prize winners. (As it turns out, the director of the research lab I worked in throughout my undergrad earned the award, and he was awesome). That said, the faculty talent doesn't end at Nobel Prize winners - with a <a href="https://www.timeshighereducation.com/world-university-rankings/2017/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats">top 10 worldwide ranking</a>, Berkeley's faculty is amazing across the board.<br></p>
 <p><br></p>
-<p> While the subject may be taboo, I was always curious how much my Professors earned. After all, any number of my professors could have gone into industry and made a killing, so surely they must be well-compensated by the University, right? Luckily for us, this information is public domain.</p>
+<p> While the subject may be taboo, I was always curious how much the Professors earned. After all, any number of my professors could have gone into industry and made a killing, so surely they must be well-compensated by the University. Luckily for us, this information is public domain. (Even luckier for us, Sahil Chinoy of the Daily Cal <a href="http://projects.dailycal.org/paychecker/">created an open-source database</a> for the data).</p>
 <p><br></p>
-<p> Below, I've visualized the data using a <a href="https://en.wikipedia.org/wiki/Treemapping">tree map</a>. Each rectangle is sized by its salary, relative to others in the same selection. Colors denote teaching level (e.g. <i> Professor</i>, <i> Lecturer</i>, etc.), and the distribution of teaching level can be showed via the <i>Display Teaching Level</i> checkbox. The scroller allows for additional color subsetting by salary. Use the filter to select a major you'd like to investigate.</p>
+<p> Below, I've visualized the data using a <a href="https://en.wikipedia.org/wiki/Treemapping">tree map</a>. Each rectangle is sized by its salary, relative to others in the same selection. Colors denote teaching level (e.g. <i> Professor</i>, <i> Lecturer</i>, etc.), and the distribution of teaching level can be viewed via the <i>Display Teaching Level</i> checkbox. The scroller allows for additional color subsetting by salary. Use the filter to select a major you'd like to investigate.</p>
 <!-- <p> Note - to keep some semblance of privacy, I've selected salaries dating 2 years back. If you're a Professor and you want to be removed, shoot me an email.</p> -->
 <p><br></p>
 
@@ -132,9 +193,137 @@
 <p><br></p>
 <h2> INSTRUCTOR SALARIES BY DEPARTMENT </h2>
 <br>
-<p> Additionally, we can juxtapose faculty salaries at a more macro level, observing how aggregate salaries differ between departments. I am particularly interested in this because students are often berated for the financial prospects of the major they chose (e.g.; <i> What's the difference between a pizza and {insert major}? A pizza can feed a family of five</i>). Is it the case that professors of these berated majors make less than their counterparts in other departments?<br></p>
+<p> Additionally, we can juxtapose faculty salaries at a more macro level, observing how aggregate salaries differ between departments. I am particularly interested in this because students are often berated for the financial prospects of their major; is it the case that professors of these berated majors make less than their counterparts in other departments?<br></p>
+<br>
+<p> To avoid skew from very high-paying professors (such as the Nobel Prize winners mentioned previously), we'll look at the median salaries of faculty by department.</p>
 <p><br></p>
 <div id="barchart"></div>
 <p> While the subject may be taboo, I was always curious how much my Professors earned. After all, any number of my professors could have gone into industry and made a killing, so surely they must be well-compensated by the University, right? Luckily for us, this information is public domain.</p>
 <p><br></p>
+
+<p> If you frequent any Berkeley-associated social media, you'll no doubt have heard the phrase "<i>EECS master race</i>", which refers to students studying Electrical Engineering and Computer Science - in particular their likelihood of landing high-paying jobs. Based on the data, it would appear, then, that this is the case for the faculty as well. Of relevant mention is the median salary for Business instructors, That said, I don't think the story here is with  </p>
+
+<div id="tooltip2" class="hidden">
+ <p><strong>Median Salary</strong></p>
+ <p>$<span id="value">100</span></p>
+</div>
+
+<script>
+    d3.csv("data/med_salary.csv", function(data) {
+        console.log(data);
+
+        data.sort(function(a, b) {
+        return b.med_salary - a.med_salary;
+      });
+
+    var margin = {top: 50, bottom: 60, left: 112, right: 112};
+    w = 1080
+    h = 1200
+
+    svg = d3.select('#barchart')
+            .append('svg')
+            .attr('width', w )
+            .attr('height', h )
+            .append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
+
+    var xScale = d3.scale.linear()
+                        .domain([0, d3.max(data, function(d) { return parseInt(d.med_salary);})])
+                        .range([margin.left, w - margin.right - margin.left ]);
+
+    var yScale = d3.scale.ordinal()
+                .domain(data.map( function(d) {return d.department;}))// .domain(d3.range(data.length))
+                .rangeBands([0, h - margin.top - margin.bottom - 20], .05);
+
+    var xAxis = d3.svg.axis()
+                .scale(xScale)
+                .orient('bottom')
+                .ticks(10);
+
+    var yAxis = d3.svg.axis()
+                .scale(yScale)
+                .orient('left');
+
+    svg.selectAll('rect')
+        .data(data)
+        .enter()
+        .append('rect')
+        .attr('id', 'rect')
+        .attr('width', function(d) { return xScale(parseInt(d.med_salary)) - 100;})
+        .attr('height', yScale.rangeBand())
+        .attr('fill', '#fdbf6f')
+        .attr('x', margin.left)
+        .attr('y', function(d) {return yScale(d.department);});
+
+    svg.append('g')
+        .classed('x-axis', true)
+        .attr('transform', 'translate(0,' + (h - margin.bottom - margin.top - 20) + ')')
+        .call(xAxis);
+
+    svg.append('g')
+        .classed('y-axis', true)
+        .attr('transform', 'translate(' + margin.left + ',0)')
+        .call(yAxis);
+
+    d3.select('svg').append('text')
+            .classed('title', true)
+            .attr('x', w/2)
+            .attr('y', margin.top - 20)
+            .attr('text-anchor', 'middle')
+            .text('Faculty Median Salary By Department')
+            .attr('font-size', 20);
+
+    // d3.selectAll('#rect')
+    //     .on('mouseover', function() {
+
+    //         d3.select(this)
+    //             .attr('fill', '#42c2f6')
+    //     });
+
+    // d3.selectAll('#rect')
+    //     .on('mouseout', function() {
+
+    //         d3.select(this)
+    //             .attr('fill', '#fdbf6f')
+    //     });
+
+    d3.selectAll('#rect')
+        .on("mouseover", function(d) {
+            //Get this bar's x/y values, then augment for the tooltip
+            var xPosition = parseFloat(d3.select(this).attr("x")) + 300;
+            var yPosition = parseFloat(d3.select(this).attr("y")) + 1212;
+            //Update the tooltip position and value
+            d3.select("#tooltip2")
+             .style("left", xPosition + "px")
+             .style("top", yPosition + "px")
+             .select("#value")
+             .text(numberWithCommas(d.med_salary))
+            //Show the tooltip
+            d3.select("#tooltip2").classed("hidden", false);
+            d3.select(this)
+                .attr('fill', '#e7db97');
+        })
+
+    d3.selectAll('#rect')
+        .on('mouseout', function() {
+
+            d3.select("#tooltip2").classed("hidden", true);
+
+            d3.select(this)
+                .attr('fill', '#fdbf6f');
+            //Hide the tooltip
+            
+        });
+
+
+});
+
+    function numberWithCommas(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
+
+</script>
+
+
+
 </body>
