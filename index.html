@@ -13,7 +13,7 @@
       width: 500px;
       height: 450px;
       top: 14%;
-      left: 20%;
+      left: 5%;
       font-family: "futura";
   }
 
@@ -53,8 +53,8 @@
   <!-- <script src="index.js"></script> -->
   <script>
     //Width and height
-    var w = 900;
-    var h = 450;
+    var w = 1200;
+    var h = 600;
     var damper = 0.102;
 
     function charge(d) {
@@ -96,7 +96,7 @@
     };
 
 
-    var center = {x: w/2 - 130, y: h/2};
+    var center = {x: w/2 - 80, y: h/2.4};
 
     var force = d3.layout.force()
             .nodes(dataset.nodes)
