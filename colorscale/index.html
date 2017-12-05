@@ -21,22 +21,40 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://d3js.org/d3.v3.js"></script>
   <style type="text/css" media="screen"></style>
+  <style>
+      #tooltip2 {
+       position: absolute;
+       width: 70px;
+       height: auto;
+       padding: 4px;
+       background-color: white;
+       -webkit-border-radius: 10px;
+       -moz-border-radius: 10px;
+       border-radius: 10px;
+       /*-webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);*/
+       /*-moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);*/
+       /*box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);*/
+       pointer-events: none;
+      }
+      #tooltip2.hidden {
+       display: none;
+      }
+      #tooltip2 p {
+       margin: 0;
+       font-size: 14px;
+       line-height: 13px;
+      }
+
+</style>
 </head>
-<div class="container">
 <body>
-  <h1>Color Picker</h1>
-<h2> USING HCL INTERPOLATION</h2>
+  <div class="container">
+  <h3>Color Picker</h3>
+<!-- <h5> USING HCL INTERPOLATION</h5> -->
 <p class="text-uppercase">by <a href="http://jwilber.github.io" target="_self">Jared Wilber</a> &middot; October 2017<br></p>
-<p> If you're anything like me, you probably spend a lot of time selecting the right color for your charts.<br>
-Choosing a color palette for a visualization can be surprisingly time consuming. Luckily, multiple websites exist to ameliorate this problem:</p>
-<ul>
-  <li><a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">ColorBrewer2</a></li>
-  <li><a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a></li>
-  <li><a href="https://coolors.co/">coolors</a></li>
-  <li><a href="https://tristen.ca/hcl-picker/#/hlc/6/1/15534C/E2E062">Colorpicker for data</a></li>
-</ul>
-<p> <b> Here's another tool to help with the process.</b>
-    Given two colors, 600 color-values will be interpolated between the two. Clicking on a color will decrease its opacity. Hovering over a color will yield its hexidecimal representation.</p>
+<p> Looking for that special color for your visualization, but not sure what to pick?</p>
+<p> If so, this tool may be of service, especially if you have an idea of the range of colors you'd like to select from.<p>
+<p> Simply select two colors, and intermediate color-values will be interpolated between the two. Clicking on a color will decrease its opacity. Hovering over a color will yield its hexidecimal representation.</p>
  
  <div id="header">
    <form name="form1" onSubmit="return handleClick()">
@@ -48,7 +66,18 @@ Choosing a color palette for a visualization can be surprisingly time consuming.
 
  </div>
   <div id="chart"></div>
-  <p><br></p>
+  <p> Here are some other wonderful aids to color selection: </p>
+  <ul>
+  <li><a href="https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3">ColorBrewer2</a></li>
+  <li><a href="https://www.w3schools.com/colors/colors_picker.asp">HTML Color Picker</a></li>
+  <li><a href="https://coolors.co/">coolors</a></li>
+  <li><a href="https://tristen.ca/hcl-picker/#/hlc/6/1/15534C/E2E062">Colorpicker for data</a></li>
+</ul>
+
+<div id="tooltip2" class="hidden">
+ <p><strong>Color</strong></p>
+ <p><span id="value">100</span></p>
+</div>
   
   
   <script type="text/javascript">
@@ -73,11 +102,11 @@ Choosing a color palette for a visualization can be surprisingly time consuming.
 
     function drawOne(color_arr){
 
-        var numRows = 20,
+        var numRows = 15,
           numCols = 30,
           numCells = numRows * numCols,
-          width = 40,
-          height = 40,
+          width = 30,
+          height = 30,
           colorOne = color_arr[0],
           colorTwo = color_arr[1];
 
@@ -133,7 +162,7 @@ Choosing a color palette for a visualization can be surprisingly time consuming.
               .attr('height', function(d) { return d.height;})
               .attr("fill", "#fff")
               .attr("stroke", "white")
-              .attr("stroke-width", 6)
+              .attr("stroke-width", 4)
               .attr("opacity", 1)
               .on('mouseover', function() {
                 // if (d3.select(this).attr("opacity") == 1) {
@@ -184,11 +213,11 @@ Choosing a color palette for a visualization can be surprisingly time consuming.
 
             };
 
-      var numRows = 20,
+      var numRows = 15,
           numCols = 30,
           numCells = numRows * numCols,
-          width = 40,
-          height = 40,
+          width = 30,
+          height = 30,
           colorOne = color_arr[0],
           colorTwo = color_arr[1];
 
@@ -226,8 +255,8 @@ Choosing a color palette for a visualization can be surprisingly time consuming.
 
     var svg = d3.select('#chart')
               .append('svg')
-              .attr('width', 1200)
-              .attr('height', 800);
+              .attr('width', 900)
+              .attr('height', 500);
 
     var row = svg.selectAll('.row')
               .data(data)
@@ -249,25 +278,15 @@ Choosing a color palette for a visualization can be surprisingly time consuming.
               .attr('height', function(d) { return d.height;})
               .attr("fill", "#fff")
               .attr("stroke", "white")
-              .attr("stroke-width", 6)
+              .attr("stroke-width", 4)
               .attr("opacity", 1)
               .on('mouseover', function() {
-                // if (d3.select(this).attr("opacity") == 1) {
-                //   d3.select(this).attr("opacity", 1);
-                //   // d3.select(this).attr("fill", 'black');
-
-                // } else {
-                //   // d3.select(this).attr("opacity", 1)
-                // };
-                  d3.select(this).attr('stroke-width', .001);
+                  d3.select(this).attr('stroke-width', .0001);
                   console.log(d3.select(this).attr('fill'));
-
-                  // .attr("opacity", 1);
               })
               .on('mouseout', function() {
                 d3.select(this)
-                  .attr('stroke-width', 5)
-                  // .attr('opacity', 0.5);
+                  .attr('stroke-width', 4)
               })
               .on('click', function() {
                 opac = d3.select(this).attr('opacity');
@@ -293,22 +312,29 @@ Choosing a color palette for a visualization can be surprisingly time consuming.
     };
 
     // CLEAR BUTTON
-    d3.select('.clear')
-      .on('click', function() {
-        opac = d3.select('rect').attr("opacity");
-        d3.selectAll('rect')
-          .attr("opacity", function() {
-            if (opac <= .2) {
-              return 1;
-            } else {
-              return opac - .1;
-            };
-          })
-          .attr("stroke-width", 3);
-      })
+    d3.selectAll('.square')
+    .on("mouseover", function(d) {
+            var fillValue = d3.select(this).attr("fill");
+            //Get this bar's x/y values, then augment for the tooltip
+            var xPosition = parseFloat(d3.select(this).attr("x")) + 10;
+            var yPosition = parseFloat(d3.select(this).attr("y")) + 300;
+            //Update the tooltip position and value
+            d3.select("#tooltip2")
+             .style("left", xPosition + "px")
+             .style("top", yPosition + "px")
+             .select("#value")
+             .text(fillValue)
+            //Show the tooltip
+            d3.select("#tooltip2").classed("hidden", false);
+        })
+
+    d3.selectAll('.square')
+        .on('mouseout', function() {
+            d3.select("#tooltip2").classed("hidden", true);            
+        });
 
   </script>
-
+</div>
 </body>
 </div>
 </html>
