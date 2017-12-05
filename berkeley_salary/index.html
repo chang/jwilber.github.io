@@ -62,15 +62,15 @@
 
 </style>
 </head>
-<body bgcolor="#fbfdfc">
+<body>
 <h1>U.C. Berkeley Salaries</h1>
 <h2> INSTRUCTOR SALARIES BY DEPARTMENT </h2>
 <p class="text-uppercase">by <a href="http://jwilber.github.io" target="_self">Jared Wilber</a> &middot; October 2017<br></p>
 
 <br>
-<p> Among all higher-education institutions in the world, U.C. Berkeley employs the highest number of Nobel Prize winners. (As it turns out, the director of the research lab I worked in throughout my undergrad earned the award, and he was awesome). That said, the faculty talent doesn't end at Nobel Prize winners - with a <a href="https://www.timeshighereducation.com/world-university-rankings/2017/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats">top 10 worldwide ranking</a>, Berkeley's faculty is amazing across the board.<br></p>
+<p> Among all higher-education institutions in the world, U.C. Berkeley employs the highest number of Nobel Prize winners. You can seem them strolling about campus, there are parking spots reserved for them; even the director of the research lab I worked in throughout my undergrad earned the award in Physics. That said, the faculty talent doesn't end at Nobel Prize winners - with a <a href="https://www.timeshighereducation.com/world-university-rankings/2017/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats">top 10 worldwide ranking</a>, Berkeley's faculty is amazing across the board.<br></p>
 <p><br></p>
-<p> While the subject may be taboo, I was always curious how much the Professors earned. After all, any number of my professors could have gone into industry and made a killing, so surely they must be well-compensated by the University. Luckily for us, this information is public domain. (Even luckier for us, Sahil Chinoy of the Daily Cal <a href="http://projects.dailycal.org/paychecker/">created an open-source database</a> for the data).</p>
+<p> While the subject may be taboo, I was always curious as to how much money the Professors made from their positions. After all, any number of them could have gone into industry and made a killing, so surely they must be well-compensated by the university. Luckily for us, this information is public domain. (Even luckier for us, Sahil Chinoy of the Daily Cal <a href="http://projects.dailycal.org/paychecker/">created an open-source database</a> for the data).</p>
 <p><br></p>
 <p> Below, I've visualized the data using a <a href="https://en.wikipedia.org/wiki/Treemapping">tree map</a>. Each rectangle is sized by its salary, relative to others in the same selection. Colors denote teaching level (e.g. <i> Professor</i>, <i> Lecturer</i>, etc.), and the distribution of teaching level can be viewed via the <i>Display Teaching Level</i> checkbox. The scroller allows for additional color subsetting by salary. Use the filter to select a major you'd like to investigate.</p>
 <!-- <p> Note - to keep some semblance of privacy, I've selected salaries dating 2 years back. If you're a Professor and you want to be removed, shoot me an email.</p> -->
@@ -191,18 +191,26 @@
 <script src="salary_tree.js"></script>
 
 <p><br></p>
-<h2> INSTRUCTOR SALARIES BY DEPARTMENT </h2>
+<p> A brief exploration of the above yields several intersting observations. As expected, there is a direct relationship between teaching-level and salary: the higher one is in the hierarchy of instruction, the better off they are compensated. There is also some salary variance related to department; it appears departments that fit into the STEM umbrella see higher ceilings for salary than those that do not. This observation remains true across teaching-levels. </p>
 <br>
-<p> Additionally, we can juxtapose faculty salaries at a more macro level, observing how aggregate salaries differ between departments. I am particularly interested in this because students are often berated for the financial prospects of their major; is it the case that professors of these berated majors make less than their counterparts in other departments?<br></p>
+<h2>SALARIES BY DEPARTMENT</h2>
+<p><br></p>
+<p> Students are often berated for the financial prospects of their major; is it the case that professors of these berated majors make less than their counterparts in other departments? In an effort to investigate any department-level difference in salary, we can compare faculty salaries at a more macro level, observing how aggregate salaries differ between departments.  <br></p>
 <br>
 <p> To avoid skew from very high-paying professors (such as the Nobel Prize winners mentioned previously), we'll look at the median salaries of faculty by department.</p>
 <p><br></p>
 <div id="barchart"></div>
-<p> While the subject may be taboo, I was always curious how much my Professors earned. After all, any number of my professors could have gone into industry and made a killing, so surely they must be well-compensated by the University, right? Luckily for us, this information is public domain.</p>
 <p><br></p>
 
-<p> If you frequent any Berkeley-associated social media, you'll no doubt have heard the phrase "<i>EECS master race</i>", which refers to students studying Electrical Engineering and Computer Science - in particular their likelihood of landing high-paying jobs. Based on the data, it would appear, then, that this is the case for the faculty as well. Of relevant mention is the median salary for Business instructors, That said, I don't think the story here is with  </p>
+<p> As we saw in the treemap previously, department appears to be a driving factor for salary.</p><br>
+<p>In general, more STEM-focused departments see higher salaries. Several factors may contribute to this phenomenon. First, Berkeley is first-and-foremost a research institute. STEM departments are very research heavy, and have access to various sources of funding that social sciences do not. Another factor may be the high demand for STEM PhDs in industry and, as a result, the higher compensation required to retain the talent in academia. This may be why EECS faculty see such high compensation, especially given Berkeley's location near Silicon Valley. </p>
 
+<!-- 
+<p> If you frequent any Berkeley-associated social media, you'll no doubt have heard the phrase "<i>EECS master race</i>", which refers to students studying Electrical Engineering and Computer Science - in particular their likelihood of landing high-paying jobs. Based on the data, it would appear, then, that this is the case for the faculty as well. Of relevant mention is the median salary for Business instructors, That said, I don't think the story here is with  </p> -->
+<p><br></p>
+<h2> Data And Methodology </h2>
+<p><br></p>
+<p> As mentioned previously, the data is publically accessible, and the Daily Cal's Sahil Chinoy  <a href="http://projects.dailycal.org/paychecker/">created an open-source database</a> using the data. Preparing the data for analysis required some light data munging, which was accomplished using R. The visualizations were created using Javascript's D3 library.<p>
 <div id="tooltip2" class="hidden">
  <p><strong>Median Salary</strong></p>
  <p>$<span id="value">100</span></p>
