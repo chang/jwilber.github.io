@@ -39,16 +39,16 @@
 
   #tooltip2 {
  position: absolute;
- width: 100px;
+ width: 90px;
  height: auto;
  padding: 4px;
  background-color: white;
  -webkit-border-radius: 10px;
  -moz-border-radius: 10px;
- border-radius: 10px;
+/* border-radius: 10px;
  -webkit-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
  -moz-box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
- box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+ box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);*/
  pointer-events: none;
 }
 #tooltip2.hidden {
@@ -56,7 +56,7 @@
 }
 #tooltip2 p {
  margin: 0;
- font-size: 10px;
+ font-size: 12px;
  line-height: 13px;
 }
 
@@ -299,7 +299,7 @@
         .on("mouseover", function(d) {
             //Get this bar's x/y values, then augment for the tooltip
             var xPosition = parseFloat(d3.select(this).attr("x")) + 300;
-            var yPosition = parseFloat(d3.select(this).attr("y")) + 1212;
+            var yPosition = parseFloat(d3.select(this).attr("y")) + 1362;
             //Update the tooltip position and value
             d3.select("#tooltip2")
              .style("left", xPosition + "px")
