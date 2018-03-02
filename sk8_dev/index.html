@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang='en' data-version='1519929289720'>
+<html lang='en' data-version='1519951380934'>
 
 <head>
 
@@ -175,6 +175,10 @@
 				"But the most important thing is a good song. The best skateboarding in the world can look fucking awful with a bad soundtrack."
 			</blockquote>
 		
+			<blockquote>
+				"Skateboard videos don’t do that. The music runs parallel with the visual, and one hopes that they both accelerate each other." (http://www.rippedlaces.com/2016/06/skateboardings-beloved-soundtracks-fugazi-with-words-by-ian-mackaye/)
+			</blockquote>
+		
 			<p> Since its earliest days, skateboarding has been intrinsically linked with music. 
 			Many well-known artists have referenced skateboarding as a defining influence, and many popular songs explicitly mention the act skateboarding.
 			Culturally, skateboarding is associated with a large variety of musical styles, and while some styles have been more-or-less popular at different points in time, almost all have had a place at some point in skateboarding. 
@@ -182,18 +186,21 @@
 		
 			<p>
 			Aside from the physical act of skateboarding, these videos are the most important piece of skateboarding culture. They communicate the current styles/trends within skating, push skateboarding's progression, and, above all else, serve as the vessels for the soundtrack of skateboarding.
+			</p>
+			<p>
+			To be clear, a skate video is exactly what it sounds like: videos of skateboarding set to music, produced professionaly by a skateboarding company, or independently through a film-maker or group of skaters. 
 		
-			Skate videos are exactly what they sound like: videos of skateboarding set to music, produced professionaly by a skateboarding company, or independently through a film-maker or group of skaters. 
-		
-			Growing up, like most skaters, if I wasn't skating, I was watching skate videos, discovering not only my new favourite skaters , but my new favourite music. 
+			Growing up, like most skaters, if I wasn't skating, I was watching skate videos, discovering not only my new favourite skaters, but my new favourite music. 
 			My first skate video, Blind's Video Days, turned me on to a diverse set of awesome artists, such as Dinosaur Jr., Black Flag, and John Coltrane.
 			</p>
 			<p>
 			In a time before Spotify or Pandora, skate videos provided something of a music tastemaker - a playlist of what's cool and who's hot in music. It spanned all genres, and all time-frames. It felt diverse. It felt counterculture. It felt cool.
 		
 			In what follows, we'll explore the artists comprising this influential soundtrack, as well as discuss how the music used in skate videos parallels the ebbs-and-flows of very culture of skateboarding itself. Who knows, maybe you'll find some cool new music you're into.
+			</p>
 		
-			<p>By exploring this playlist, we can learn how music tracks the evolution of the styles and trends of skateboarding, as well as identify the <i>who's who</i> in this sphere of influence, earning our own street cred. </p>
+			<p>By exploring this playlist, we can learn how music tracks the evolution of the styles and trends of skateboarding, as well as identify the <i>who's who</i> in this sphere of influence, earning our own street cred.
+			 </p>
 		
 			</div>
 		</div>
@@ -307,7 +314,6 @@
 					<div class='chart'>
 						<!-- <p>0</p> -->
 						<div class="joyplot"></div>
-		
 					</div>
 				</div>
 		
@@ -393,12 +399,13 @@
 					graphic.style('width', bodyWidth + 'px')
 						.style('height', window.innerHeight + 'px');
 		
-					var chartMargin = 2;
+					var chartMargin = 50;
 					var textWidth = text.node().offsetWidth;
 					var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
 					chart
 						.style('width', chartWidth + 'px')
-						.style('height', Math.floor(window.innerHeight ) + 'px');
+						// idk why but dividing height by 1.05
+						.style('height', Math.floor(window.innerHeight / 1.15 ) + 'px');
 					// 3. tell scrollama to update new element dimensions
 					scroller.resize();
 				}
@@ -406,10 +413,9 @@
 				// scrollama event handlers
 				function handleStepEnter(response) {
 					// add color to current step only
-					step.classed('is-active', function (d, i) {
-						return i === response.index;
-					})
-					// d3.selectAll('.line').attr('stroke', function(d, i) { return colors[response.index];});
+					// step.classed('is-active', function (d, i) {
+					// 	return i === response.index;
+					// })
 					d3.selectAll('rect#maskRect')
 						.attr('x', function(d) {
 							return maskRange[response.index];
@@ -466,8 +472,10 @@
 		
 		<div style="background-color:white;">
 		
-		<h1 class='intro__hed tk-canela'>The Most Popular Artists</h1>
 		<div class="body_text">
+		
+			<div class="waffle_chart"></div>
+		
 			<p>
 			Overall, the most frequently employed genre in skateboarding is [], having been used in % across all videos.
 			Hip Hop comprises X % of the music in skateboarding. Classic Rock X %. Indie music, which dominates the contemporary, comprises X% overall, while electronic and rock, combined, yield less than X%.
@@ -477,6 +485,7 @@
 			<p>  Let's turn out attention to the artists that comprise skateboarding's playlist, and explore directly those artists driving the ebbs-and-flows of cultures,the members of skateboarding's coveted playlist.
 			
 			In the graph below, each node represents an artist. Each node is color-coded by genre, and sized proportionally to the number of times that artist is used across all skate videos.</p>
+			<h3 class='intro__hed tk-canela'>The Most Popular Artists</h3>
 		
 			<div id="toolbar">
 				<a id="genre" class="button active">By Genre</a>
@@ -615,7 +624,7 @@
 	<script src='assets/scripts/d3.v4.10.2+jetpack.min.js'></script>
 	<script src='assets/scripts/d3.v3.js'></script>
 	<script type="text/javascript" src="https://cdn.rawgit.com/tinker10/D3-Labeler/master/labeler.js"></script>
-	<script src='bundle.js?version=1519929289720' async></script>
+	<script src='bundle.js?version=1519951380934' async></script>
 	<script src='https://pudding.cool/assets/scripts/pudding-footer.js' async></script>
 </body>
 
